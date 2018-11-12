@@ -1,0 +1,37 @@
+.parent {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-areas: 
+        ". box1 ."
+        "box4 . box2"
+        ". box3 .";
+}
+.box {
+    height: 100px;
+    width: 100px;
+    border-color: black;
+    border-style: solid;
+    box-sizing: border-box;
+}
+.box1 {
+    grid-area: box1;
+    border-width: 0px 5px 5px 5px;
+    margin: -5;
+    
+}
+.box2 {
+    grid-area: box2;
+    border-width: 5px 0px 5px 5px;
+    margin: -5;
+}
+.box3 {
+    grid-area: box3;
+    border-width: 5px 5px 0px 5px;
+    margin: -5;
+}
+.box4 {
+    grid-area: box4;
+    border-width: 5px 5px 5px 0px;
+    margin: -5;
+}

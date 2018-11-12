@@ -1,0 +1,169 @@
+/* Body/övrigt */
+
+body {
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    
+    margin: 0 auto;
+    max-width: 960px;
+    min-height: 600px;
+    background: white;
+    
+}
+
+/* Typografi */
+
+.resmal_info p {
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 38px;
+    color: #a508d4;
+}
+
+h3 {
+    background: #a508d4;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    margin-top: -5px;
+    height: 25px;
+}
+
+/* Länkar/innehåll med länkar */
+
+nav ul {
+    list-style: none;
+    padding: 0px;
+    text-align: right;
+}
+
+nav li {
+    display: inline;
+    margin: 10px;
+    
+}
+
+nav a {
+    font-family: 'Oswald', Sans-serif;
+    text-decoration: none;
+    color: #00376d;
+    font-size: 22px;
+    text-transform: uppercase;
+    background: white;
+    padding: 10px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #a508d4;
+    color: white;
+}
+
+/* Body innehåll */
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    width: 40%;
+}
+.logo img {
+    width: 100px;
+}
+
+nav.meny {
+    width: 100%;
+    height: 100%;
+    margin-top: 45px;
+    
+}
+
+.fuckGoogle {
+    display: block;
+}
+
+footer {
+    background-image: url(../images/footer.gif);
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-color: #802082;
+    background-size: 100%;
+    padding-top: 300px;
+}
+
+.inner_footer {
+    display: flex;
+    justify-content: center;
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+.footerbox {
+    width: 32%;
+    margin-left: 1%;
+    height: 300px;
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+}
+
+.footerbox h3 {
+    background: none;
+    padding: 0;
+}
+
+.footerbox img {
+    margin-right: 10px;
+}
+
+.imagesbar {
+    background: white;
+    background-image: url("../images/himmel.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flygplan {
+    width: 20%;
+}
+
+.resmal {
+    width: 30%;
+    display: inline-block;
+    margin: 0px 5px 0px 5px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.resmal img {
+    width: 100%;
+}
+
+iframe {
+    width: 960px;
+    min-height: 500px;
+    border-radius: 50%;
+}
+
+

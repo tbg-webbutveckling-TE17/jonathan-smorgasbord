@@ -1,0 +1,74 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    height: 150px;
+    width: 100%;
+    background: #ff5e57;
+    margin: 0px 0 30px 0;
+}
+nav {
+    height: 50px;
+    width: 100%;
+    background: #ff5e57;
+    margin: 0px 0 30px 0;
+}
+main {
+    width: 70%;
+    display: inline-block;
+}
+aside {
+    display: inline;
+    width: 30%;
+    height: 100%;
+    margin: 0px 0px 0 30px;
+}
+footer {
+    height: 50px;
+    width: 100%;
+    background: #ff3f34;
+}
+.blogpost {
+    height: 500px;
+    background: #e17055;
+    margin: 0px 0 30px 0;
+}
+.wrapper {
+    display: flex;
+}
+.midbox {
+    height: 300px;
+    width: 100%;
+    background: #fdcb6e;
+    margin: 0px 0 30px 0;
+}
+.midclassbox {
+    height: 500px;
+    width: 100%;
+    background: #fdcb6e;
+    margin: 0px 0 30px 0;
+}
+.smallbox {
+    display: inline-block;
+    height: 150px;
+    width: 50%;
+    background: #fdcb6e;
+    margin: 0px 0px 0px 0px;
+}
+.small1 {
+    margin: 0px 30px 0px 0px;
+}
+.smallboxcontainer {
+    display: flex;
+    width: 100%;
+    margin: 0px 0px 30px 0px;
+}
+
+.midsmallbox {
+    height: 190px;
+    width: 100%;
+    background: #fdcb6e;
+    margin: 0px 0px 30px 0px;
+}

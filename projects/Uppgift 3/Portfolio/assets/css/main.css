@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1 {
+    margin: 25px auto;
+    font-family: Helvetica;
+    font-size: 50px
+}
+h2 {
+    margin: 25px auto;
+    font-family: Helvetica;
+    font-size: 30px;
+    color: white;
+    opacity: 0;
+}
+.grid-parent {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-areas: "box1 box2 box3"
+                         "box4 box5 box6"
+                         "box7 box8 box9";
+}
+.gridbox {
+    height: 100%;
+    width: 100%;    
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gridbox:hover h2 {
+    transition: background 0.5s;
+    opacity: 1;
+    
+    
+}
+.box1 {
+    grid-area: box1;
+    background: url("../images/portfolioimage1.jpg");
+}
+.box2 {
+    grid-area: box2;
+    background: url("../images/portfolioimage1.jpg");
+}
+.box3 {
+    grid-area: box3;
+    background: url("../images/portfolioimage1.jpg");
+}
+.box4 {
+    grid-area: box4;
+    background: url("../images/portfolioimage1.jpg");
+}
+.box5 {
+    grid-area: box5;
+    background: url("../images/portfolioimage1.jpg");
+}
+.box6 {
+    grid-area: box6;
+    background: url("../images/portfolioimage1.jpg");
+}
+.box7 {
+    grid-area: box7;
+    background: url("../images/portfolioimage1.jpg");
+}
+.box8 {
+    grid-area: box8;
+    background: url("../images/portfolioimage1.jpg");
+}
+.box9 {
+    grid-area: box9;
+    background: url("../images/portfolioimage1.jpg");
+}
+
+
+

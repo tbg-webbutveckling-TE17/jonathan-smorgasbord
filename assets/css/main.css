@@ -1,0 +1,73 @@
+@charset "utf-8";
+body {
+    background: #F6F4F3;
+    font-family: Open Sans;
+}
+.wrapper {
+    margin: auto;
+    width: 50%;
+}
+h1 {
+    color: black;
+    font-size: 40px;
+    font-weight: 300;
+    margin: 10px;
+}
+.grid {
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    transition: all 0.5s;
+    border-color: #276FBF;
+    position: relative;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(24, 48, 89);
+    z-index: 999;
+    transition: all 1;
+}
+
+.dropdown-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(24, 48, 89);
+}
+.dropdown-content:hover {
+    background: rgb(255, 40, 40);
+}
+.dropdown-content a {
+    text-shadow: 2px 2px 5px #000;
+}
+
+.grid-item a {
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.5;
+}
+.item1 {
+    background: rgb(24, 48, 89);
+}
+.item2 {
+    background: #276FBF;
+}
+.item1 a, .item2 a {
+    color: white;
+}
+.grid-item:hover .dropdown {
+    transition: all 10s;
+    background: black;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, (100px, 100px, 100px);
+}
