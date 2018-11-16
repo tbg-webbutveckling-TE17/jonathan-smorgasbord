@@ -17,21 +17,21 @@
 .box1 {
     grid-area: box1;
     border-width: 0px 5px 5px 5px;
-    margin: -5;
+    margin: 5px 0 0 0px;
     
 }
 .box2 {
     grid-area: box2;
     border-width: 5px 0px 5px 5px;
-    margin: -5;
+    margin: 0 0px 0 -5px;
 }
 .box3 {
     grid-area: box3;
     border-width: 5px 5px 0px 5px;
-    margin: -5;
+    margin: -5px 0 0px 0px;
 }
 .box4 {
     grid-area: box4;
     border-width: 5px 5px 5px 0px;
-    margin: -5;
+    margin: 0 0 0 5px;
 }
