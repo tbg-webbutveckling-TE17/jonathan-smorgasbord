@@ -1,0 +1,276 @@
+/* #0E0B16 #A239CA #E7DFDD #4717f6 */
+body {
+    font-family: Open Sans;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(8, 7, 5);
+}
+.loginBox, .signupBox, .inputBox {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.loginBox button, .loginBox input, .signupBox button, .signupBox input {
+    color: white;
+    width: 40%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px;
+    background: transparent;
+    border: 1px solid white;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(8, 7, 5);
+}
+::-webkit-scrollbar-thumb {
+    background: #970ffa; 
+}
+.darkMode {
+    background: rgba(75, 36, 74, 0.85) !important ;
+    transition: all 1s
+}
+.darkMode button:hover {
+    border-bottom: 3px solid #c86fff !important ;
+    transition: all 1s
+}
+#header, #about, #download {
+    width: 100%;
+    background: rgba(230, 65, 65, 0.75);
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background 1s;
+}
+#header {
+    position: relative;
+}
+.headerbg {
+    object-fit: cover;
+    position: absolute;
+    z-index: -2;
+    height: 100%;
+    width: 100%;
+}
+.description button {
+    margin: 10px;
+    padding: 5px 15px;
+    font-weight: 400;
+    font-size: 25px;
+    background: transparent;
+    border-radius: 5px;
+    border-bottom: 3px solid transparent;
+    border: 1px solid;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s
+}
+#step, #contact {
+    background: rgb(8, 7, 5);
+    color: black;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+.inputBox input, .inputBox button {
+    width: 450px;
+    color: white;
+    padding: 0px 15px;
+    margin: 10px;
+    border: 1px solid white;
+    background: transparent;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 15px;
+}
+.windowsUpdates {
+    display: flex;
+    flex-direction: column;
+    
+}
+.linuxUpdates {
+    display: flex;
+    flex-direction: column;
+}
+.windowsUpdates, .linuxUpdates, .mobileUpdates {
+    margin: 25px;
+}
+.updateList {
+    display: flex
+}
+.updateList a, .updateList a:visited {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+.updateList i {
+    margin: 0 10px;
+}
+.updateList img {
+    width: 200px;
+}
+.inputSmall {
+    height: 50px;
+}
+.inputLarge {
+    height: 150px;
+}
+.inputBox button {
+    height: 50px;
+}
+
+/*Typography, Buttons & icons*/
+
+button {
+    font-family: Open Sans;
+    letter-spacing: 1.5px;
+    color: white;
+}
+nav button {
+    height: 50%;
+    padding: 6px 15px;
+    border: none;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    background: transparent;
+    border-bottom: 3px solid transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+}
+nav button:hover {
+    border-bottom: 3px solid #fc9a6e;
+}
+nav i {
+    padding: 10px 15px;
+    font-size: 20px;
+}
+h1, h2, h3, p, i {
+    margin: 5px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: 300;
+    margin: 5px;
+}
+h1 {
+    font-size: 70px;
+    font-weight: 400;
+}
+h3 {
+    font-size: 30px;
+    font-weight: 300;
+}
+.description button:hover {
+    background: #f56767;
+}
+.filedrop i {
+    margin: 10px;
+    font-size: 30px;
+}
+.filedrop p {
+    margin: 10px;
+    overflow: auto;
+    font-size: 25px;
+}
+.navLink {
+    display: flex;
+    align-items: center;
+}
+p {
+    font-size: 20px;
+    font-weight: 200;
+}
+#about p {
+    width: 60%;
+}
+.description {
+    width: 90%;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 75px;
+}
+.stepBox {
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+.steps {
+    margin: 20px;
+ } 
+.step1 {
+    width: 40%;
+}
+.step2 {
+    width: 30%;
+}
+.step3 {
+    width: 20%;
+}
+.steps {
+}
+.filedrop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+.dropfile {
+    position: absolute;
+    opacity: 0;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+select {
+    height: 200px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 0 0 5px 5px;
+    color: white;
+    font-size: 20px;
+}
+option {
+    background: #1a1a1a;
+    border: 1px solid white;
+}
+#step button {
+    font-family: Open Sans;
+    margin: 5px;
+    padding: 5px 15px;
+    color: white;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    background: transparent;
+    border-radius: 5px;
+    border-bottom: 3px solid transparent;
+    border: 1px solid; 
+}

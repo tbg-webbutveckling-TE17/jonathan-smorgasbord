@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <script>
+        function toggleNightMode() {
+            var color1 = document.getElementById("header");
+            var color2 = document.getElementById("download");
+            var color3 = document.getElementById("about");
+            var moonToggle = document.getElementById("moon");
+            color1.classList.toggle("darkMode");
+            color2.classList.toggle("darkMode");
+            color3.classList.toggle("darkMode");
+            moonToggle.classList.toggle("fas");
+            
+        }
+        </script>
+    </head>
+    <body>
+        <section class="wrapper">
+            <header id="header">
+                <nav>
+                   <section class="navLink">
+                       <a href="#header"><button>HOME</button></a>
+                       <a href="#about"><button>ABOUT</button></a>
+                       <a href="#contact"><button>CONTACT</button></a>
+                       <a href="#download"><button>DOWNLOAD</button></a>
+                       <a href="subpages/signup.html"><button>SIGN UP</button></a>
+                       <a href="subpages/login.html"><button>LOGIN</button></a>
+                       <i id="moon" class="far fa-moon" onclick="toggleNightMode()"></i>
+                   </section> 
+               </nav>
+               <img class="headerbg" src="http://bitchlasagna.pw/qwFcLkEe.jpg">
+                <section class="logo">
+                    <h1 class="logoPurple">PNGIF.ly</h1>
+                </section>
+                <section class="description">
+                    <h2>Screenshots have never been easier, now including link shortening!</h2>
+                </section>
+            </header>
+            <section id="step">
+                <h2>As easy as 1, 2, 3!</h2>
+                <section class="stepBox">
+                    <section class="step1 steps">
+                        <h3>Drop your file</h3>
+                        <section class="filedrop">
+                            <p>Drop File</p>
+                            <i class="fas fa-file"></i>
+                            <input class="dropfile" type="file">
+                        </section>
+                    </section>
+                    <section class="step2 steps">
+                        <h3>Select your domain</h3>
+                        <select multiple="multiple">
+                            <option value="niconiconii.pw">niconiconii.pw</option>
+                            <option value="meme.webcam">meme.webcam</option>
+                            <option value="bitchlasagna.pw">bitchlasagna.pw</option>
+                            <option value="uwu.se">COMING SOON</option>
+                            <option value="uwu.se">COMING SOON</option>
+                            <option value="uwu.se">COMING SOON</option>
+                            <option value="uwu.se">COMING SOON</option>
+                            <option value="uwu.se">COMING SOON</option>
+                            <option value="uwu.se">COMING SOON</option>
+                            <option value="uwu.se">COMING SOON</option>
+                        </select>
+                    </section>
+                    <section class="step3 steps">
+                        <h3>Upload!</h3>
+                        <button>Submit</button>
+                    </section>
+                </section>
+            </section>
+            <section id="about">
+                <h2>About</h2>
+                <p>We are a team of people that work to achieve image- and file shortening services for as many people as possible if they would like to share their content online. Our primary goal is to offer everything for free if possible and the platform is monetized with the help of sponsored advertisement without having private data we are ethically not supposed to have.</p>
+            </section>
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <section class="inputBox">
+                    <input placeholder="First & Last name" class="inputSmall input1" type="text">
+                    <input placeholder="Email Adress" class="inputSmall input2" type="text">
+                    <input placeholder="Text" class="inputLarge input3" type="text">
+                    <button class="inputButton input4">SKICKA</button>
+                </section>
+            </section>
+            <section id="download">
+                <h2>Download the App</h2>
+                <section class="updateList">
+                    <section class="windowsUpdates">
+                        <h3>Windows</h3>
+                        <a href="#"><i class="fas fa-file-download"></i>PNGIFFY-Win-1.5.1</a>
+                        <a href="#"><i class="fas fa-file-download"></i>PNGIFFY-Win-1.4</a>
+                        <a href="#"><i class="fas fa-file-download"></i>PNGIFFY-Win-1.3.1</a>
+                        <a href="#"><i class="fas fa-file-download"></i>PNGIFFY-Win-1.2</a>
+                        <a href="#"><i class="fas fa-file-download"></i>PNGIFFY-Win-1.0.2</a>
+                        <a href="#"><i class="fas fa-file-download"></i>PNGIFFY-Win-1.0.1</a>
+                    </section>
+                    <section class="linuxUpdates">
+                        <h3>Linux</h3>
+                        <a href="#"><i class="fas fa-file-download"></i>PNGIFFY-Linux-1.2</a>
+                        <a href="#"><i class="fas fa-file-download"></i>PNGIFFY-Linux-1.1.2</a>
+                        <a href="#"><i class="fas fa-file-download"></i>PNGIFFY-Linux-1.1.1</a>
+                        <a href="#"><i class="fas fa-file-download"></i>PNGIFFY-Linux-1.1</a>
+                    </section>
+                    <section class="mobileUpdates">
+                        <h3>Mobile</h3>
+                        <img src="http://bitchlasagna.pw/LpHfqEod.png">
+                        <p>Sorry Apple users,<br>we do not support garbage</p>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </body>
+    <script href="assets/js/main.js"></script>
+</html>
