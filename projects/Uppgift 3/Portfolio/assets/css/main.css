@@ -12,7 +12,7 @@ h2 {
     margin: 25px auto;
     font-family: Helvetica;
     font-size: 30px;
-    color: white;
+    color: black;
     opacity: 0;
 }
 .grid-parent {
@@ -31,12 +31,18 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s;
+}
+.gridbox h2 {
+    transition: all 0.5s;
 }
 .gridbox:hover h2 {
-    transition: background 0.5s;
     opacity: 1;
-    
-    
+     
+}
+.gridbox:hover {
+    background: #ffffff;
+     
 }
 .box1 {
     grid-area: box1;
