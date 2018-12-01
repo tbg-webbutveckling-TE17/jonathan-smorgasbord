@@ -25,7 +25,26 @@
                     <h2>SIGN UP USING TWITTER</h2>
                 </button>
             </form>
-            
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Open modal</button>
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Invalid Credentials</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <li>Email Adress Invalid</li>
+                                <li>Email Adress already in use</li>
+                                <li>Your password has been previously breached</li>
+                                <li>The passwords do not match</li>
+                                <li>Invalid Invite Key</li>
+                            </ul>
+                       </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
