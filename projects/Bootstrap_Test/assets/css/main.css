@@ -31,13 +31,13 @@ button {
     color: white;
     margin: 10px 0px;
 }
+button:hover {
+    background: #272727;
+}
 button h2 {
     font-size: 20px;
     font-weight: 400;
     margin: auto 25px;
-}
-.twitter {
-    background: #208ffd
 }
 .twitter img {
     height: 25px;
@@ -64,11 +64,14 @@ button h2 {
     border-bottom-right-radius: 3px;
 }
 .modal-header {
-    background: #fa0101;
+    background: #333333
 }
 h4 {
     color: #ffffff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+h3 {
+    font-size: 20px;
 }
 li {
     color: rgba(170, 5, 5, 0.7);
@@ -81,4 +84,15 @@ ul {
 }
 .modal-dialog {
     max-width: 400px;
+}
+.close {
+    color: #ffffff;
+    opacity: 0.9;
+    text-shadow: 0 2px 0 #000000;
+}
+.close:hover {
+    color: #c3c3c3;
+}
+.info {
+    margin: 50px auto;
 }

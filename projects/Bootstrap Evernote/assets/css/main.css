@@ -1,0 +1,35 @@
+.navbar {
+    background: #ffffff;
+    padding: 5px 10px;
+}
+.nav-brand {
+    font-size: 25px;
+    font-weight: 500;
+}
+.nav-link {
+    transition: background 0.5s, color 0.25s;
+    font-size: 20px;
+    margin: 0 10px;
+    color: #2a2a2a;
+}
+.nav-link:hover {
+    background-color: #3beb4f;
+    color: white;
+}
+.active {
+    background-color: #3b8fe2;
+    color: white;
+}
+h2 {
+    
+}
+h3 {
+    font-weight: 300;
+}
+button {
+    border: 0;
+    background-color: #3b8fe2;
+    color: white;
+    padding: 5px 10px;
+    
+}
