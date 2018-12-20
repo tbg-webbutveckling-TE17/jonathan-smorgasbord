@@ -1,39 +1,51 @@
 body {
     padding: 0;
     margin: 0;
+    font-family: Open Sans;
 }
-h1 {
-    font-size: 50px;
+.head h2 {
+    font-size: 40px;
     margin: 20px;
     display: inline-block;
     color: #ffffff;
-    font-family: Helvetica;
-    font-weight: 300;
+    font-weight: 400;
 }
 hr {
     width: 95%;
     height: 3px;
-    background: #e0e0e0;
+    background: #84ace2;
     border: 0;
 }
 p {
-    font-family: Helvetica;
     font-size: 18px;
     font-weight: 100;
     color: #ffffff;
     margin: 0px 30px 0px 30px;
     
 }
-p.date {
-    display: inline-block ;
-    margin: 30px;
-    font-size: 25px;
-    font-weight: 100;
+article {
+    padding: 10px 30px;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+header h1 {
+    font-size: 50px;
+    margin: 20px;
+    color: #ffffff;
+    font-weight: 400;
+}
+h3 {
+    margin: 0px 20px;
+    font-size: 15px;
+    font-weight: 200;
     color: #ffffff;
 }
 .wrapper {
     margin: 0 auto;
-    width: 960px;
+    max-width: 960px;
     min-height: 1080px;
     background: #2c3e50;    
 }
@@ -41,8 +53,8 @@ p.date {
     display: flex;
     justify-content: space-between;
 }
-.quote {
-    margin: 15px 30px 30px 30px;
+.blogpost {
+    margin: 5px;
     border-left: 5px;
     border-color: #d0493c;
     border-left-style: solid;
@@ -50,19 +62,18 @@ p.date {
     background: #34495e;
     border-radius: 5px 5px
 }
-.quotetext {
+.blogpost-content {
     margin: 10px; 
 }
 .authorsig {
     display: flex;
     align-items: center;
-    margin: 10px 10px 10px 20px; 
+    margin: 10px;
 }
 img {
     height: 30px;
     
 }
 .authorsig p {
-    display: inline;
     margin: 0px;
 }
