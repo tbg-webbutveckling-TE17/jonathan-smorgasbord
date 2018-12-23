@@ -87,7 +87,7 @@ main {
     justify-content: center;
     align-items: center;  
 }
-.inputBox input, .inputBox button {
+.inputBox input, .inputBox button, .inputBox textarea {
     width: 450px;
     color: white;
     padding: 0px 15px;
@@ -97,6 +97,9 @@ main {
     box-sizing: border-box;
     font-weight: 400;
     font-size: 15px;
+}
+.inputBox textarea {
+    padding: 15px;
 }
 .windowsUpdates {
     display: flex;
