@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <form id="kontaktForm" action="" method="post">
+        <fieldset>
+            <legend>Kontaktformulär</legend>
+            
+            <p>
+                <label for="forname">Förnamn</label>
+                <input id="forname" placeholder="Skriv ditt förnamn här" type="text" required>
+            </p>
+            <p>
+                <label for="lastname">Efternamn</label>
+                <input id="lastname" placeholder="Skriv ditt Efternamn här" type="text" required>
+            </p>
+            <p>
+                <label for="email">E-postadress</label>
+                <input id="email" placeholder="Skriv din E-postadress här" type="email" required>
+            </p>
+            <p>
+                <label for="username">Användarnamn</label>
+                <input id="username" placeholder="Skriv ditt Användarnamn här" type="text" required>
+            </p>
+            <p>
+                <label for="password">Lösenord</label>
+                <input id="password" placeholder="Skriv ditt lösenord" type="password" required>
+            </p>
+            <textarea placeholder="Skriv ditt meddelande här"></textarea>
+            <p>
+                <input type="submit" value="Skicka">
+                <input type="reset" value="Rensa">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
