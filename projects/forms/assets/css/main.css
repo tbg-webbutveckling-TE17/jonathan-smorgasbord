@@ -27,6 +27,9 @@
 #kontaktForm input[type="text"]::placeholder {
     color: orange;
 }
+#kontaktForm input {
+    transition: all 10s;
+}
 #kontaktForm input:focus {
     outline: 1px solid orange;
 }
