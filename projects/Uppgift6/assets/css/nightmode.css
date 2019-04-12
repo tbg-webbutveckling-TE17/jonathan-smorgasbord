@@ -32,16 +32,14 @@ main {
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: rgb(240, 240, 240);
-    transition: 1s all;
+    background: rgb(8, 7, 5);
 }
 ::-webkit-scrollbar-thumb {
-    background: rgba(109, 24, 10, 1);
+    background: #970ffa; 
 }
-
 #header, #about, #download {
     width: 100%;
-    background: rgba(190, 50, 30, 0.7);
+    background: rgba(75, 36, 74, 0.85) !important ;
     padding: 25px 0;
     display: flex;
     flex-direction: column;
@@ -118,7 +116,7 @@ main {
     color: white;
 }
 .updateList a:hover {
-    background: #ff725f;
+    background: #834eff;
     border-radius: 3px;
 }
 .updateList i {
@@ -157,7 +155,7 @@ nav a {
     padding: 20px;
 }
 nav a:hover {
-    border-bottom: 3px solid #fc9a6e;
+    border-bottom: 3px solid #c86fff;
 }
 nav i {
     padding: 10px 15px;
@@ -181,9 +179,6 @@ h1 {
 h3 {
     font-size: 30px;
     font-weight: 300;
-}
-.description button:hover {
-    background: #f56767;
 }
 .filedrop i {
     margin: 10px;

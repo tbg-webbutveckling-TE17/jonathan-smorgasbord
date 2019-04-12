@@ -3,19 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <title>PNGIFly</title>
-        <link rel="stylesheet" href="assets/css/main.css">
+        
+        <link id="stylesheet" rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <script>
-        function toggleNightMode() {
-            var color1 = document.getElementById("header");
-            var color2 = document.getElementById("download");
-            var color3 = document.getElementById("about");
-            var moonToggle = document.getElementById("moon");
-            color1.classList.toggle("darkMode");
-            color2.classList.toggle("darkMode");
-            color3.classList.toggle("darkMode");
-            moonToggle.classList.toggle("fas");
-            
+        <script type='text/javascript'>
+        var nightModeOn = false;
+        function toggle() {
+            var stylesheet = document.getElementById("stylesheet");
+            if(nightModeOn === false) {
+                stylesheet.setAttribute("href", "assets/css/nightmode.css");
+                nightModeOn = true;
+            }
+            else {
+                stylesheet.setAttribute("href", "assets/css/main.css");
+                nightModeOn = false;
+            }
         }
         </script>
     </head>
@@ -29,7 +31,7 @@
                        <a href="#download">DOWNLOAD</a>
                        <a href="subpages/signup.html">SIGN UP</a>
                        <a href="subpages/login.html">LOGIN</a>
-                       <a id="moon" class="far fa-moon" onclick="toggleNightMode()" alt="night mode"></a>
+                       <a id="moon" class="far fa-moon" onclick="toggle()" alt="night mode"></a>
                </nav>
                <img class="headerbg" src="assets/img/screenshot.jpg" alt="header background image">
                 <section class="logo">
