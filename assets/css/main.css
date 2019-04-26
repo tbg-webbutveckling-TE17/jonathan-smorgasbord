@@ -23,6 +23,9 @@ h1 {
 .year1-extra {
     grid-template-columns: 1fr 1fr;
 }
+.year2 .item3 a {
+    font-size: 30px;
+}
 .grid-header {
     display: flex;
     justify-content: center;
@@ -63,8 +66,20 @@ h1 {
     align-items: center;
     background: rgb(24, 48, 89);
 }
-.dropdown-content:hover {
-    background: rgb(255, 40, 40);
+.item1 {
+    background: #C62828;
+}
+.item2 {
+    background: #283593;
+}
+.item3 {
+    background: #1b1b1b;
+}
+.item1:hover {
+    background: #761818;
+}
+.item2:hover {
+    background: #181f57;
 }
 .dropdown-content a  {
     text-shadow: 2px 2px 5px #000;
@@ -77,12 +92,6 @@ h1 {
     transition: all 0.5;
     color: white;
 
-}
-.item1 {
-    background: #C62828;
-}
-.item2 {
-    background: #283593;
 }
 .grid-item:hover .dropdown {
     transition: all 10s;
