@@ -266,6 +266,33 @@ option {
     border-bottom: 3px solid transparent;
     border: 1px solid; 
 }
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #1a1a1a;
+}
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+.contact-info i {
+    font-size: 25px;
+    color: white;
+
+}
+.contact-info a {
+    margin: 0px 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    font-family: Open Sans;
+
+}
 @media only screen and (max-width: 728px) {
     header {
         border-bottom: 1px solid rgb(8, 7, 5)
@@ -302,5 +329,5 @@ option {
     }
     .updateList a {
         font-size: 30px;
-
+    }
 } 

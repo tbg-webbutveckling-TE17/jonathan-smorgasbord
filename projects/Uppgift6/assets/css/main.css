@@ -312,6 +312,15 @@ footer {
     header {
         border-bottom: 1px solid rgb(8, 7, 5)
     }
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    h3 {
+        font-size: 30px;
+    }
     nav {
         width: 100%;
         padding: 20px;
@@ -321,6 +330,7 @@ footer {
         flex-flow: row wrap;
     }
     nav a, i {
+        margin: 10px;
         padding: 20px;
         font-size: 25px;
     }
@@ -340,10 +350,10 @@ footer {
         flex-direction: column;
     }
     .updateList h3 {
-        font-size: 40px;
+        font-size: 30px;
     }
     .updateList a {
-        font-size: 30px;
+        font-size: 25px;
     }
     .login {
         width: 90%;
