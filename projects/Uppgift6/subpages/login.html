@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <title>PNGIFly Login</title>
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-</head>
-<body>
-    <main>
-        <section class="loginBox">
-            <h2>PNGIF.ly</h2>
-            <h3>SIGN UP</h3>
-            <input placeholder="Username" class="inputSmall" type="text">
-            <input placeholder="Password" class="inputSmall" type="text">
-            <h3>OR</h3>
-            <input placeholder="Auth Key" class="inputSmall" type="text">
-            <button class="inputButton">LOGIN</button>
+    <head>
+        <meta charset="UTF-8">
+        <title>PNGIFly Login</title>
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    </head>
+    <body>
+        <section class="wrapper">
+        <main>
+            <section class="loginBox">
+                <h2>PNGIF.ly</h2>
+                <h3>LOG IN</h3>
+                <form class="login">
+                    <input placeholder="Username" class="inputSmall" type="text">
+                    <input placeholder="Password" class="inputSmall" type="password">
+                    <button class="submit">LOGIN</button>
+                </form>
+                <h3>OR</h3>
+                <form class="login">
+                    <input placeholder="Auth Key" class="inputSmall" type="text">
+                    <button class="submit">LOGIN</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <section class="contact-info twitter">
+                <i class="fab fa-twitter"></i>
+                <a>@PNGIFLY</a>
+            </section>
+            <section class="contact-info email">
+                <i class="fas fa-envelope"></i>
+                <a>CONTACT@PNGIF.LY</a>
+            </section>
+            <section class="contact-info facebook">
+                <i class="fab fa-facebook"></i>
+                <a>@PNGIFLY</a>
+            </section>
+        </footer>
         </section>
-    </main>
-</body>
+    </body>
 </html>

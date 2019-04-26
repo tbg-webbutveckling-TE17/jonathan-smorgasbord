@@ -9,14 +9,17 @@
         <script type='text/javascript'>
         var nightModeOn = false;
         function toggle() {
+            var moonToggle = document.getElementById("moon");
             var stylesheet = document.getElementById("stylesheet");
             if(nightModeOn === false) {
                 stylesheet.setAttribute("href", "assets/css/nightmode.css");
                 nightModeOn = true;
+                moonToggle.classList.toggle("fas");
             }
             else {
                 stylesheet.setAttribute("href", "assets/css/main.css");
                 nightModeOn = false;
+                moonToggle.classList.toggle("fas");
             }
         }
         </script>
@@ -31,7 +34,7 @@
                        <a href="#download">DOWNLOAD</a>
                        <a href="subpages/signup.html">SIGN UP</a>
                        <a href="subpages/login.html">LOGIN</a>
-                       <a id="moon" class="far fa-moon" onclick="toggle()" alt="night mode"></a>
+                       <a href="#" id="moon" class="far fa-moon" onclick="toggle()" alt="night mode"></a>
                </nav>
                <img class="headerbg" src="assets/img/screenshot.jpg" alt="header background image">
                 <section class="logo">
@@ -43,13 +46,13 @@
             </header>
             <section id="step">
                 <h2>As easy as 1, 2, 3!</h2>
-                <section class="stepBox">
+                <form class="stepBox">
                     <section class="step1 steps">
                         <h3>Drop your file</h3>
                         <section class="filedrop">
                             <p>Drop File</p>
                             <i class="fas fa-file"></i>
-                            <input class="dropfile" type="file">
+                            <input tabindex="0" class="dropfile" type="file">
                         </section>
                     </section>
                     <section class="step2 steps">
@@ -69,9 +72,9 @@
                     </section>
                     <section class="step3 steps">
                         <h3>Upload!</h3>
-                        <button>Submit</button>
+                        <button type="submit">Submit</button>
                     </section>
-                </section>
+                </form>
             </section>
             <section id="about">
                 <h2>About</h2>
@@ -107,11 +110,25 @@
                     </section>
                     <section class="mobileUpdates">
                         <h3>Mobile</h3>
-                        <img src="assets/img/google-play-download.png">
-                        <p>Sorry Apple users,<br>we do not support garbage</p>
+                        <a href="#"><img src="assets/img/google-play-download.png"></a>
+                        <a href="#"><p>Sorry Apple users,<br>we do not support garbage</p></a>
                     </section>
                 </section>
             </section>
+            <footer>
+                <section class="contact-info twitter">
+                    <i class="fab fa-twitter"></i>
+                    <a>@PNGIFLY</a>
+                </section>
+                <section class="contact-info email">
+                    <i class="fas fa-envelope"></i>
+                    <a>CONTACT@PNGIF.LY</a>
+                </section>
+                <section class="contact-info facebook">
+                        <i class="fab fa-facebook"></i>
+                        <a>@PNGIFLY</a>
+                    </section>
+            </footer>
         </section>
     </body>
     <script href="assets/js/main.js"></script>

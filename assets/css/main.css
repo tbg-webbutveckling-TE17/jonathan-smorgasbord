@@ -13,10 +13,29 @@ h1 {
     font-weight: 300;
     margin: 10px;
 }
-.grid {
+.grid-type {
     box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.5);
     display: grid;
+}
+.year1 {
     grid-template-columns: 1fr 1fr;
+}
+.year1-extra {
+    grid-template-columns: 1fr 1fr;
+}
+.grid-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #212121;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 50px;
+}
+.grid-header h2 {
+    font-size: 1.75em;
+    font-weight: 400;
+    color: white;
 }
 
 .grid-item {
@@ -47,27 +66,27 @@ h1 {
 .dropdown-content:hover {
     background: rgb(255, 40, 40);
 }
-.dropdown-content a {
+.dropdown-content a  {
     text-shadow: 2px 2px 5px #000;
 }
 
-.grid-item a {
+.grid-item a, .grid-item h3 {
     text-decoration: none;
     font-size: 20px;
+    font-weight: 300;
     transition: all 0.5;
+    color: white;
+
 }
 .item1 {
-    background: rgb(24, 48, 89);
+    background: #C62828;
 }
 .item2 {
-    background: #276FBF;
-}
-.item1 a, .item2 a {
-    color: white;
+    background: #283593;
 }
 .grid-item:hover .dropdown {
     transition: all 10s;
     background: black;
     display: grid;
-    grid-template-columns: repeat(auto-fill, (100px, 100px, 100px);
+    grid-template-columns: repeat(auto-fill, (100px, 100px, 100px));
 }
