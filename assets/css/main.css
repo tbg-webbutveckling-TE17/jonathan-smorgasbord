@@ -21,7 +21,8 @@ h1 {
     grid-template-columns: 1fr 1fr;
 }
 .year1-extra {
-    grid-template-columns: 1fr 1fr;
+}
+.year2 {
 }
 .year2 .item3 a {
     font-size: 30px;
