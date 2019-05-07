@@ -58,6 +58,8 @@ body {
 }
 
 .dropdown-content {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,15 +71,17 @@ body {
 .year1-extra {
     grid-template-columns: 1fr;
 }
-.year2 .item3 a {
-    font-size: 30px;
-}
 .grid-type {
     box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.5);
     display: grid;
 }
 
 /* Typography */
+
+.year2 .item3 a {
+    font-size: 30px;
+}
+
 h1 {
     color: black;
     font-size: 40px;
@@ -100,9 +104,6 @@ h1 {
 .item2:hover {
     background: #181f57;
 }
-.dropdown-content a  {
-    text-shadow: 2px 2px 5px #000;
-}
 
 .grid-item a, .grid-item h3 {
     text-decoration: none;
@@ -112,12 +113,14 @@ h1 {
     color: white;
 
 }
-.dropdown-content a {
+.dropdown-content h3 {
     text-align: center;
     font-weight: 300;
+    text-shadow: 2px 2px 5px #000;
+    margin: 0;
 }
 .dropdown-content i {
-    margin: 0 3px;
+    margin: 0 5px 0 0;
 }
 .grid-item:hover .dropdown {
     transition: all 10s;
