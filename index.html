@@ -3,12 +3,103 @@
     <head>
         <meta charset="UTF-8">
         <title>Smörgåsbord</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     </head>
     <body>
+        <section class="color-picker-toggle">
+            <button id="color-button" class="fas fa-tint">o</button>
+        </section>
+        <section id="test" class="grid-color-picker">
+            <section class="color-picker-color"></section>
+            <section class="color-picker-color"></section>
+            <section class="color-picker-color"></section>
+            <section class="color-picker-color"></section>
+        </section>
         <section class="wrapper">
             <h1>Mitt smörgåsbord</h1>
+            <div class="modal fade" id="uppgift4-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Uppgift 4</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h2>Layout 1 & 2</h2>
+                            <p>På den första och andra layouten så blev jobbet ganska enkelt då jag inte behövde göra så mycket än att bara kopiera</p>
+                            <h2>Layout 3 & 2</h2>
+                            <p>När det kom till layout 3 och 4 så spenderade jag mycket mer tid på dem då jag behövde göra mer jobb, under några perioder av lovet satt jag och tänke på olika designval för att kunna göra Layout 3 och därefter försöke skapa breakpoints då Dennis hade introducerat dem till mig, jag skapade en layout som funkade på min hemdator, laptop, min mammas tablet och både en iPhone 7+ och en Samsung S7, alla funkade klockrent. När jag gick över till layout 4 så hade jag ett problem vilket var att jag kände mig väldigt omotiverad då det var svårt att skapa en layout med en bra design till min standard för att det fanns för många boxar, frestelsen av att kunna börja på Uppgift 5 kröp också bakom mig så jag såg bara till att sidan skulle funka på min laptop och hemdator, vilket resulterade i små designförändringar med hjälp av breakpoints.</p>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Open Document</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="uppgift3-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Uppgift 3</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h2>Luffarschack</h2>
+                            <p>Luffarschacket var något helt nytt för där jag lärde mig om grid-area och att kunna placera dessa väldigt smidigt ifall detta ska vara statiskt, jag lärde mig också att man inte kan "spela tetris" med areas, jag fick också veta att man kan göra vissa columner dubbelt så långa med att lägga ett likadant grid-area värde brevid i template'n</p>
+                            <h2>Portfolio</h2>
+                            <p>Portfoliot var ganska lätt nu när jag lärde mig hur man använde sig av grid, massor av kod från luffarshacket kunde användas, varje box fick då sin egna bild och assignerades 100% höjd och bredd, bra uppgift för att repetera vad man lärde med luffarshacket i en annan form.</p>
+                            <h2>Blogg</h2>
+                            <p>Bloggen var irriterande att göra eftersom att det var mestadels skrivande och är anledningen till varför jag blev klar med uppgift 4 innan uppgift 3, när uppgiften drog upp raster och vektorgrafik till att skriva om lärde jag mig skillnaden till vad man använder dom båda till för.</p>
+                            <h2>Dropdown</h2>
+                            <p>Att skapa dropdown delen var nog den svåraste delen som jag gjorde då jag aldrig har gjort en helt ny från scratch utan att hitta allt från google, mitt första problem när jag skulle skapa den var att den första lektionen så hade jag problem med att min bakgrundsfärg för min dropdown blev väldigt konstig och jag tyckte att den blev väldigt konstig, när jag tittade över uppgiften igen så insåg jag att allting skulle vara samma bakgrundsfärg så jag behövde aldrig oroa mig om det egentligen, med det undan så gick det ganska fort och jag frågade Dennis om hur man gör så att mitt dropdown content inte rör andra dropdownlists som jag hade i min nav, detta kom vi fram till med att använda relativa och absoluta positions vilket löste mitt problem helt.</p>
+                            <h2>Kontaktformulär</h2>
+                            <p>Kontaktformuläret var ganska enkelt, jag hade tänkt göra allt i grid först men från ett förslag av Dennis tyckte han att jag skulle göra halva delen i flex och själva formuläret inuti grid, mitt största problem var att kunna göra så att sidan liknade exemplet till viss del, men med att jag inte hade tillgång till den bilden så kan hela designen ändras på grund av att det gäller en bakgrund som bilden spelade som roll, transparenta färger gör också att man får försöka ha olika färgscheman som ska passa till den nya bakgrunden som jag hittade på unsplash.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Open Document</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="uppgift2-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Uppgift 2</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h2>Evas Frukt</h2>
+                            <p>Första uppgiften Evas frukt så fanns det redan en css fil så jag skrev samma HTML kod som instruktören gjorde på sina youtube videos, vad jag märkte var att positioneringen av olika element använde sig av float vilket är en utdaterad css-property. Så jag kom upp med en temporär lösning genom att använda 2 olika p element till dem första textstycken så gjorde jag ett stort mellanrum med hjälp av br elementet för att få samma effekt. 
+                            Sedan använde jag mig av flex för att få allt att fungera tillsammans.
+                            <br><br>
+                            Efter så var det uppenbart att designen med flex och elementet br så då byttes de ut mot display: inline-block. De två br elementen som låg under loggan togs bort och då fick loggan en egen klass med en margin på 20 pixlar.
+                            </p>
+                            <h2>Hit & Dit</h2>
+                            <p>Som sagt så är det lite klurigare när de instuktören använder sig av utdaterade metoder som osemantiska element som div och css-properties som float, fixade detta med att använda en parent som innehåll ett p element och ett img element, med olika widths angedda för att kunna ha de brevid varandra.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <main class="grid">
                 <section class="grid-header">
                     <h2>Webbutveckling 1</h2>
@@ -17,40 +108,105 @@
                     <section class="grid-item item2">
                         <a href="#" target="_blank">Webbkoda</a>
                         <section class="dropdown">
-                            <section class="dropdown-content item2"><a target="_blank" href="projects/Uppgift2/Evas%20frukt/">Evas Frukt</a></section>
-                            <section class="dropdown-content item2"><a target="_blank" href="projects/Uppgift2/Hit%20och%20Dit/">Hit och Dit-Resor</a></section>
+                            <section class="dropdown-content item2">
+                                <a target="_blank" href="projects/Uppgift2/Evas frukt/">
+                                    <i class="fab fa-html5"></i>
+                                    Evas Frukt
+                                </a>
+                            </section>
+                            <section class="dropdown-content item2">
+                                <a target="_blank" href="projects/Uppgift2/Hit och Dit/">
+                                    <i class="fab fa-html5"></i>
+                                    Hit och Dit-Resor
+                                </a>
+                            </section>
                         </section>
                     </section>
                     <section class="grid-item item1">
                         <a href="#" target="_blank">Ett steg i taget...</a>
                         <section class="dropdown">
-                            <section class="dropdown-content item1"><a target="_blank" href="http://bitchlasagna.pw/Smorgasbord/projects/Uppgift%203/Luffarschack/">Luffarschack-bräde</a></section>
-                            <section class="dropdown-content item1"><a target="_blank" href="http://bitchlasagna.pw/Smorgasbord/projects/Uppgift%203/Portfolio/">Portfolio</a></section>
-                            <section class="dropdown-content item1"><a target="_blank" href="http://bitchlasagna.pw/Smorgasbord/projects/Uppgift%203/Blogg/">Blogg</a></section>
-                            <section class="dropdown-content item1"><a target="_blank" href="http://bitchlasagna.pw/Smorgasbord/projects/Uppgift%203/Dropdown/">Dropdown menu</a></section>
-                            <section class="dropdown-content item1"><a target="_blank" href="http://bitchlasagna.pw/Smorgasbord/projects/Uppgift%203/Kontaktformular/">Kontaktformulär</a></section>
+                            <section class="dropdown-content item1">
+                                <a target="_blank" href="projects/Uppgift3/Luffarschack/">
+                                    <i class="fab fa-html5"></i>
+                                    Luffarschack-bräde
+                                </a>
+                            </section>
+                            <section class="dropdown-content item1">
+                                <a target="_blank" href="projects/Uppgift3/Portfolio/">
+                                    <i class="fab fa-html5"></i>
+                                    Portfolio
+                                </a>
+                            </section>
+                            <section class="dropdown-content item1">
+                                <a target="_blank" href="projects/Uppgift3/Blogg/">
+                                    <i class="fab fa-html5"></i>
+                                    Blogg
+                                </a>
+                            </section>
+                            <section class="dropdown-content item1">
+                                <a target="_blank" href="projects/Uppgift3/Dropdown/">
+                                    <i class="fab fa-html5"></i>
+                                    Dropdown menu
+                                </a>
+                            </section>
+                            <section class="dropdown-content item1">
+                                <a target="_blank" href="projects/Uppgift3/Kontaktformular/">
+                                    <i class="fab fa-html5"></i>
+                                    Kontaktformulär
+                                </a>
+                            
+                            <i class="fab fa-html5"></i></section>
                         </section>
                     </section>
                     <section class="grid-item item1">
                         <a href="#" target="_blank">Layouts i alla de smaker</a>
                         <section class="dropdown">
-                            <section class="dropdown-content item1"><a target="_blank" href="http://bitchlasagna.pw/Smorgasbord/projects/Uppgift%204/Layout%201/">Layout 1</a></section>
-                            <section class="dropdown-content item1"><a target="_blank" href="http://bitchlasagna.pw/Smorgasbord/projects/Uppgift%204/Layout%201/">Layout 2</a></section>
-                            <section class="dropdown-content item1"><a target="_blank" href="http://bitchlasagna.pw/Smorgasbord/projects/Uppgift%204/Layout3/">Layout 3</a></section>
-                            <section class="dropdown-content item1"><a target="_blank" href="http://bitchlasagna.pw/Smorgasbord/projects/Uppgift%204/Layout4/">Layout 4</a></section>
+                            <section class="dropdown-content item1">
+                                <a target="_blank" href="projects/Uppgift4/Layout 1/">
+                                    <i class="fab fa-html5"></i>
+                                    Layout 1
+                                </a>
+                            </section>
+                            <section class="dropdown-content item1">
+                                <a target="_blank" href="projects/Uppgift4/Layout 2/">
+                                    <i class="fab fa-html5"></i>
+                                    Layout 2
+                                </a>
+                            </section>
+                            <section class="dropdown-content item1">
+                                <a target="_blank" href="projects/Uppgift4/Layout3/">
+                                    <i class="fab fa-html5"></i>
+                                    Layout 3
+                                </a>
+                            </section>
+                            <section class="dropdown-content item1">
+                                <a target="_blank" href="projects/Uppgift4/Layout4/">
+                                    <i class="fab fa-html5"></i>
+                                    Layout 4
+                                </a>
+                            
+                            </section>
                         </section>
                     </section>
                     <section class="grid-item item2">
                         <a href="#" target="_blank">Uppgift 5</a>
                         <section class="dropdown">
-                            <section class="dropdown-content item2"><a target="_blank" href="projects/Uppgift5/index.html">Animation, Transition och <br> Transform</a></section>
+                            <section class="dropdown-content item2">
+                                <a target="_blank" href="projects/Uppgift5/index.html">
+                                    <i class="fab fa-html5"></i>
+                                    Animation, Transition och <br> Transform
+                                </a>
+                            </section>
                         </section>
                     </section>
                     <section class="grid-item item2">
                         <a href="#" target="_blank">Uppgift 6</a>
                         <section class="dropdown">
                             <section class="dropdown-content item2">
-                                <a href="projects/Uppgift6/index.html" target="_blank">Screenshot website</a>
+                                <a href="projects/Uppgift6/index.html" target="_blank">
+                                    <i class="fab fa-html5"></i>
+                                    Screenshot website
+                                </a>
                             </section>
                         </section>
                     </section>
@@ -58,16 +214,28 @@
                             <h3>Loggbok</h3>
                             <section class="dropdown">
                                 <section class="dropdown-content item1">
-                                    <a href="projects/Loggbok/Loggbok%20Uppgift%202%20Jonathan.rtf" target="_blank">Uppgift 2</a>
+                                    <a href="" data-toggle="modal" data-target="#uppgift2-modal" target="_blank">
+                                        <i class="fas fa-file-word"></i>
+                                        Uppgift 2
+                                    </a>
                                 </section>
                                 <section class="dropdown-content item1">
-                                    <a href="projects/Loggbok/uppgift%203.rtf" target="_blank">Uppgift 3</a>    
+                                    <a href="" data-toggle="modal" data-target="#uppgift3-modal" target="_blank">
+                                        <i class="fas fa-file-word"></i>
+                                        Uppgift 3
+                                    </a>    
                                 </section>
                                 <section class="dropdown-content item1">
-                                    <a href="projects/Loggbok/Uppgift%204.rtf" target="_blank">Uppgift 4</a>
+                                    <a href="" data-toggle="modal" data-target="#uppgift4-modal" target="_blank">
+                                        <i class="fas fa-file-word"></i>
+                                        Uppgift 4
+                                    </a>
                                 </section>
                                 <section class="dropdown-content item1">
-                                    <a href="https://docs.google.com/document/d/1vb-7MwKGo-tSHgLL08XZYb3lXyraJPZfemwz1nLG_rs/edit?usp=sharing" target="_blank">Slutprojekt</a>
+                                    <a href="" target="_blank">
+                                        <i class="fab fa-google"></i>
+                                        Slutprojekt
+                                    </a>
                                 </section>
                             </section>
                     </section>
@@ -79,21 +247,46 @@
                     <section class="grid-item item1">
                         <a href="#" target="_blank">Bootstrap Projects</a>
                         <section class="dropdown">
-                            <section class="dropdown-content item1"><a target="_blank" href="projects/Bootstrap_Test/index.html">Bootstrap Test</a></section>
-                            <section class="dropdown-content item1"><a target="_blank" href="projects/BootstrapEvernote/index.html">Bootstrap Evernote</a></section>
+                            <section class="dropdown-content item1">
+                                <a target="_blank" href="projects/Bootstrap/Bootstrap_Test/">
+                                    <i class="fab fa-html5"></i>
+                                    Bootstrap Test</a>
+                                </section>
+                            <section class="dropdown-content item1">
+                                <a target="_blank" href="projects/Bootstrap/BootstrapEvernote/">
+                                    <i class="fab fa-html5"></i>
+                                    Bootstrap Evernote
+                                </a>
+                            </section>
                         </section>
                     </section>   
                     <section class="grid-item item2">
                         <a href="#" target="_blank">Sass Projects</a>
                         <section class="dropdown">
-                            <section class="dropdown-content item2"><a target="_blank" href="projects/2projects/DragochPrepros/index.html">Google Home</a></section>
-                            <section class="dropdown-content item2"><a target="_blank" href="projects/2projects/videoproject/index.html">Video Project</a></section>
+                            <section class="dropdown-content item2">
+                                <a target="_blank" href="projects/Sass Projects/GoogleHome/">
+                                    <i class="fab fa-sass"></i>
+                                    Google Home
+                                </a>
+                            </section>
+                            <section class="dropdown-content item2">
+                                <a target="_blank" href="projects/Sass Projects/videoproject/">
+                                    <i class="fab fa-sass"></i>
+                                    Video Project
+                                </a>
+                            </section>
                         </section>
-                    </section>  
+                    </section> 
                     <section class="grid-item item1">
-                        <a href="#" target="_blank">Pug Project</a>
+                        <a href="#" target="_blank">Pug Projects</a>
                         <section class="dropdown">
-                            <section class="dropdown-content item1"><a target="_blank" href="projects/Pug%20Projects/">Replicate</a></section>
+                            <section class="dropdown-content item1">
+                                <a target="_blank" href="projects/Pug Projects/">
+                                    <i class="fas fa-paw"></i>
+                                    <i class="fab fa-sass"></i>
+                                    Pug Project
+                                </a>
+                            </section>
                         </section>
                     </section>  
                 </section>
@@ -110,5 +303,18 @@
                 </section>
             </main>
         </section>
+        <script>
+                var colorButton = document.getElementById("color-button");
+                colorButton.addEventListener("click", function() {
+                    var colorGrid = document.getElementById("test")
+                    colorGrid.style.display = colorGrid.style.display === 'grid' ? '' : 'grid';
+                });
+                const closeList = document.querySelectorAll('color-picker-color');
+                closeList.forEach(element => {
+                    element.addEventListener('click', function() {
+                        console.log(event.target);
+                    });
+                });
+            </script>
     </body>
 </html>
