@@ -1,26 +1,47 @@
 @charset "utf-8";
 body {
-    background: #F6F4F3;
+    background: rgb(40, 40, 40);
     font-family: Roboto;
-    transition: 10s background;
+    padding: 20px;
 }
 .wrapper {
     margin: auto;
-    width: 50%;
+    padding: 20px 0;
+    width: 60%;
     position: relative;
 }
-.grid-color-picker {
-    position: absolute;
-    margin: 10px;
-    display: none;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 5px;
-
+header {
+    display: flex;
+    align-items: center;
+}
+.year-divider {
+    border: 3px solid #212121;
+}
+#color-button {
+    border: 0;
+    background: 0;
+    font-size: 30px;
+}
+.color-picker-parent {
+    display: flex;
 }
 .color-picker-color {
-    background: red;
     height: 50px;
     width: 50px;
+}
+#colorpicker {
+    text-shadow: 0px 0px 3px #000;
+    font-size: 30px;
+    border: 0;
+    background: transparent;
+
+}
+.colpick {
+    z-index: 4444444;
+}
+main {
+    display: flex;
+    flex-direction: column;
 }
 .grid-header {
     display: flex;
@@ -41,35 +62,36 @@ body {
 .grid-item {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 200px;
     transition: all 0.5s;
+    padding: 10px 0;
     border-color: #276FBF;
     position: relative;
 }
 .dropdown {
-    display: none;
-    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, (100px, 100px, 100px));
     width: 100%;
     height: 100%;
-    background: rgb(24, 48, 89);
     z-index: 999;
-    transition: all 1;
 }
 
 .dropdown-content {
     width: 100%;
     height: 100%;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(24, 48, 89);
 }
 .year1 {
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
 }
 .year1-extra {
-    grid-template-columns: 1fr;
+    display: flex !important;
+    flex-direction: column;
 }
 .grid-type {
     box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.5);
@@ -81,28 +103,41 @@ body {
 .year2 .item3 a {
     font-size: 30px;
 }
-
+.dir::after {
+    display: inline-block;
+    border-top: 15px solid transparent;
+	border-left: 20px solid #555;
+    border-bottom: 15px solid transparent;
+    background: transparent;
+    content: "";
+}
 h1 {
-    color: black;
+    background: #555;
+    color: white;
+    text-shadow: 1px 1px 5px #000;
     font-size: 40px;
     font-weight: 300;
     margin: 10px;
 }
-
+.grid-item:hover {
+    box-shadow: none;
+}
+.dropdown-content {
+}
 .item1 {
     background: #C62828;
 }
 .item2 {
-    background: #283593;
+    background: #C62828;
 }
 .item3 {
     background: #1b1b1b;
 }
-.item1:hover {
-    background: #761818;
+.dropdown .item1:hover {
+    background: #7e1c1c;
 }
-.item2:hover {
-    background: #181f57;
+.dropdown .item2:hover {
+    background: #761818;
 }
 
 .grid-item a, .grid-item h3 {
@@ -123,10 +158,7 @@ h1 {
     margin: 0 5px 0 0;
 }
 .grid-item:hover .dropdown {
-    transition: all 10s;
     background: black;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, (100px, 100px, 100px));
 }
 .modal-dialog {
     min-width: 1000px;
