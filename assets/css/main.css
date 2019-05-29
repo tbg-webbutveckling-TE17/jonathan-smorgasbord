@@ -124,7 +124,9 @@ main {
     display: grid;
     grid-gap: 5px;
 }
-
+.colpick {
+    z-index: 100000;
+}
 /* Typography */
 
 .year2 .item3 a {
@@ -196,4 +198,5 @@ h1 {
     .year1 {
         grid-template-columns: 1fr;
     }
+    
 }

@@ -39,7 +39,7 @@
                         </section>
                     <section class="header-bottom notification">
                         <h3>Latest Change:</h3>
-                        <h4>Redesigned Smorgasbord - Preparations for future responsive resolutions begun.</h4>
+                        <h4>Done for the semester.</h4>
                     </section>
                 </header>
             <div class="modal fade" id="uppgift5-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -55,8 +55,7 @@
                                 <p>Uppgiften var ganska simpel, bara att göra sakerna som man redan kunde från förut och lägga till dom i sina egna boxar, hade lite problem med att förstå vad alla saker betydde men med hjälp av Dennis så kunde jag förstå vad han menade med "Swing-animationer", något lite svårare var att skapa en image slider men med hjälp av google så kunde jag skapa den med href taggar med elementet a, hade använt checkboxes också då jag har erfarenhet med dom också sen när jag försökte göra prototyper till mitt Smörgåsbord, men av någon anledningen funkade dessa inte med min image slider så fick bli en simpel lösning på mitt problem, göra på ett annat sätt då det finns fler än ett.</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Open Document</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -78,8 +77,7 @@
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Open Document</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -106,8 +104,7 @@
                             <p>Kontaktformuläret var ganska enkelt, jag hade tänkt göra allt i grid först men från ett förslag av Dennis tyckte han att jag skulle göra halva delen i flex och själva formuläret inuti grid, mitt största problem var att kunna göra så att sidan liknade exemplet till viss del, men med att jag inte hade tillgång till den bilden så kan hela designen ändras på grund av att det gäller en bakgrund som bilden spelade som roll, transparenta färger gör också att man får försöka ha olika färgscheman som ska passa till den nya bakgrunden som jag hittade på unsplash.</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Open Document</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -132,8 +129,7 @@
                             <p>Som sagt så är det lite klurigare när de instuktören använder sig av utdaterade metoder som osemantiska element som div och css-properties som float, fixade detta med att använda en parent som innehåll ett p element och ett img element, med olika widths angedda för att kunna ha de brevid varandra.</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -287,7 +283,7 @@
                                                 <h3>Uppgift 5</h3>
                                             </section>
                                     </a>
-                                    <a href="" target="_blank">
+                                    <a href="https://docs.google.com/document/d/1vb-7MwKGo-tSHgLL08XZYb3lXyraJPZfemwz1nLG_rs/edit?usp=sharing" target="_blank">
                                         <section class="dropdown-content item1">
                                             <i class="fab fa-google"></i>
                                             <h3>Slutprojekt</h3>
@@ -370,19 +366,6 @@
                     </section>
                 </section>
             </main>
-        </section>
-        <script>
-                var colorButton = document.getElementById("color-button");
-                colorButton.addEventListener("click", function() {
-                    var colorGrid = document.getElementById("test")
-                    colorGrid.style.display = colorGrid.style.display === 'grid' ? '' : 'grid';
-                });
-                const closeList = document.querySelectorAll('color-picker-color');
-                closeList.forEach(element => {
-                    element.addEventListener('click', function() {
-                        console.log(event.target);
-                    });
-                });
-            </script>
+        </section> 
     </body>
 </html>
