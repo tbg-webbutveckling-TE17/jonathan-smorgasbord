@@ -12,3 +12,16 @@ h1 {
     font-weight: 900;
     text-shadow: 2px 2px 4px #11111196;
 }
+
+ul {
+    position: relative;
+    width: 500px;
+    height: 250px;
+    li {
+        position: absolute;
+        text-decoration: none;
+        list-style: none;
+        height: 100%;
+        width: 100%;
+    }
+}
