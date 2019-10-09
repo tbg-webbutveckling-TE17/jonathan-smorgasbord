@@ -16,11 +16,11 @@ h1 {
   font-weight: 900;
   text-shadow: 2px 2px 4px #11111196; }
 
-ul {
+div {
   position: relative;
   width: 500px;
   height: 250px; }
-  ul li {
+  div img {
     position: absolute;
     text-decoration: none;
     list-style: none;

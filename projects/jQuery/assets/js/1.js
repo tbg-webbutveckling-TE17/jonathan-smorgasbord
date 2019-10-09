@@ -69,22 +69,28 @@
 //     });
 // });
 
-$(function()
-{
-    var slides = $("#slider").children();
-    console.log(slides)
-    x = 1;
-    setInterval(function() {
-        $(slides).hide();
-        $(slides).parents("#slider>li:nth-child(" + x + ")").find("img").show();
-        if (x == slides.length) 
-        {
-            $('#mydiv').children('input').each(function () {
-                alert(this.value); // "this" is the current element in the loop
-            });
-        }
-        else {
-            x++;
-        }
-    }, 2000)
-});
+//Exercise 7
+
+// $(function()
+// {
+//     var slides = $("#slider").children();
+//     console.log(slides)
+//     x = 0;
+//     setInterval(function() {
+//         $(slides).hide();
+//         $(slides).eq(x).show();
+//         if (x == slides.length-1) 
+//         {
+//             x = 0;
+//         }
+//         else {
+//             x++;
+//         }
+//     }, 1000)
+//     setInterval(function() {
+//         var d = new Date();
+//         var t = d.toLocaleTimeString();
+//         $("#time").html(t);
+//     })
+// });
+
