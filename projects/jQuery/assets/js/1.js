@@ -94,3 +94,63 @@
 //     })
 // });
 
+//Exercise 9
+//https://www.w3schools.com/jquery/jquery_ref_traversing.asp
+
+//Exercise 10
+// $("#loadFile").click(function(e) {
+//     $.ajax({
+//         url: "test.html",
+//         success: function (result, status, xhr) {
+//             $("#htmlData").html(result);
+//         }
+//     });
+// });
+
+// $.ajax({
+//     url: "jsonData.json",
+//     success: function (result, status, xhr) {
+//         var table = $("<table><tr><th>Product</th><th>Color</th><th>Price</th></tr>")
+//         var tr;
+//         for (var i = 0; i < result.length; i++) {
+//             tr = $("<tr>");
+//             tr.append("<td>" + result[i].Product + "</td>");
+//             tr.append("<td>" + result[i].Color + "</td>");
+//             tr.append("<td>" + result[i].Price + "</td>");
+//             table.append(tr);
+//             $("#htmlData").html(table);
+//         }
+//     }
+// });
+
+//Exercise 11
+
+var myNames = ["Jon", "Alex", "Lily"];
+$.each(myNames, function(index, value) {
+    console.log("[" + index + "] : " + value);
+});
+
+    json
+var json = [
+    {
+        "Product": "Ferrari",
+        "Color": "Chroma",
+        "Price": "$1,000,000"
+    },
+    {
+        "Product": "Volvo 740",
+        "Color": "Bae",
+        "Price": "$7,200,000,000" 
+    },
+    {
+        "Product": "Used socks",
+        "Color": "White",
+        "Price": "$2"
+    }
+]
+
+$.each(json, function(index, value) {
+    $.each(this, function(index, value) {
+        console.log(index + " :: " + value);
+    });
+});

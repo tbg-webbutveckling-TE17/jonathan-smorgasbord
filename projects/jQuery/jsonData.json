@@ -1,0 +1,17 @@
+[
+    {
+        "Product": "Ferrari",
+        "Color": "Chroma",
+        "Price": "$1,000,000"
+    },
+    {
+        "Product": "Volvo 740",
+        "Color": "Bae",
+        "Price": "$7,200,000,000" 
+    },
+    {
+        "Product": "Used socks",
+        "Color": "White",
+        "Price": "$2"
+    }
+]
