@@ -154,3 +154,24 @@ $.each(json, function(index, value) {
         console.log(index + " :: " + value);
     });
 });
+
+$("#paragraphs p").each(function (index, value) {
+}).filter(":odd").each(function (index, value) {
+    $(value).css("background-color", "red");
+});
+
+// $("#fadeButton1").click(function (e) {
+//     $("#fade").fadeOut();
+// })
+
+// $("#fadeButton2").click(function (e) {
+//     $("#fade").fadeIn();
+// })
+
+$("#fadeButton1").click(function (e) {
+    $("#fade").fadeOut(3000, "linear")
+});
+
+$("#fadeButton2").click(function (e) {
+    $("#fade").fadeIn(5000, "linear");
+});
