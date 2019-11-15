@@ -125,53 +125,68 @@
 
 //Exercise 11
 
-var myNames = ["Jon", "Alex", "Lily"];
-$.each(myNames, function(index, value) {
-    console.log("[" + index + "] : " + value);
-});
+// var myNames = ["Jon", "Alex", "Lily"];
+// $.each(myNames, function(index, value) {
+//     console.log("[" + index + "] : " + value);
+// });
 
-    json
-var json = [
-    {
-        "Product": "Ferrari",
-        "Color": "Chroma",
-        "Price": "$1,000,000"
-    },
-    {
-        "Product": "Volvo 740",
-        "Color": "Bae",
-        "Price": "$7,200,000,000" 
-    },
-    {
-        "Product": "Used socks",
-        "Color": "White",
-        "Price": "$2"
-    }
-]
+//     json
+// var json = [
+//     {
+//         "Product": "Ferrari",
+//         "Color": "Chroma",
+//         "Price": "$1,000,000"
+//     },
+//     {
+//         "Product": "Volvo 740",
+//         "Color": "Bae",
+//         "Price": "$7,200,000,000" 
+//     },
+//     {
+//         "Product": "Used socks",
+//         "Color": "White",
+//         "Price": "$2"
+//     }
+// ]
 
-$.each(json, function(index, value) {
-    $.each(this, function(index, value) {
-        console.log(index + " :: " + value);
-    });
-});
+// $.each(json, function(index, value) {
+//     $.each(this, function(index, value) {
+//         console.log(index + " :: " + value);
+//     });
+// });
 
-$("#paragraphs p").each(function (index, value) {
-}).filter(":odd").each(function (index, value) {
-    $(value).css("background-color", "red");
-});
+// $("#paragraphs p").each(function (index, value) {
+// }).filter(":odd").each(function (index, value) {
+//     $(value).css("background-color", "red");
+// });
+
+// // $("#fadeButton1").click(function (e) {
+// //     $("#fade").fadeOut();
+// // })
+
+// // $("#fadeButton2").click(function (e) {
+// //     $("#fade").fadeIn();
+// // })
 
 // $("#fadeButton1").click(function (e) {
-//     $("#fade").fadeOut();
-// })
+//     $("#fade").fadeOut(3000, "linear")
+// });
 
 // $("#fadeButton2").click(function (e) {
-//     $("#fade").fadeIn();
-// })
+//     $("#fade").fadeIn(5000, "linear");
+// });
 
-$("#fadeButton1").click(function (e) {
-    $("#fade").fadeOut(3000, "linear")
-});
+function generateFortune() {
+    var rndName = ["Sasha", "LL", "OOO"];
+    var rndLoc = ["New York", "California"];
+    var rndJobTitle = ["Dentist", "Programmer"]
+    var rndNum = [Math.floor(Math.random() * 10)]
+    tellFortune(rndJobTitle[Math.floor(Math.random() * rndJobTitle.length)], rndLoc[Math.floor(Math.random() * rndLoc.length)], rndName[Math.floor(Math.random() * rndName.length)], rndNum[Math.floor(Math.random() * rndNum.length)])
+}
 
-$("#fadeButton2").click(function (e) {
-    $("#fade").fadeIn(5000, "linear");
-});
+function tellFortune(jobTitle, geoLoc, partnerName, numChildren) {
+    var tellFuture = `You will be a ${jobTitle} in ${geoLoc} and married to ${partnerName} with ${numChildren} children`
+    pFortune = document.getElementById("fortune");
+    pFortune.innerHTML = tellFuture
+
+}
