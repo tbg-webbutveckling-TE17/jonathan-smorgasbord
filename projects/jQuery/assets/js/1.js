@@ -176,6 +176,29 @@
 //     $("#fade").fadeIn(5000, "linear");
 // });
 
+document.getElementById("idButton").addEventListener("click", generateFortune);
+document.addEventListener("keypress", keyClick);
+var guesses = 10;
+var wins = 0;
+var losses = 0;
+var code = ["A", "B", "C"];
+var guessedLetters = "";
+
+function keyClick() {
+    var currentLetter = String.fromCharCode(event.keyCode);
+    guessedLetters += currentLetter;
+    code.forEach(element => {
+        if(currentLetter == element.toLowerCase()) {
+            document.getElementById("youFound").innerHTML = "You found the letter " + currentLetter;
+            console.log(String.fromCharCode(event.keyCode));
+        }
+        else {
+            guesses--;
+            document.getElementById("guesses").innerHTML = "Guesses Left: " + guesses;
+        }
+    });
+}
+
 function generateFortune() {
     var rndName = ["Sasha", "LL", "OOO"];
     var rndLoc = ["New York", "California"];
@@ -188,5 +211,7 @@ function tellFortune(jobTitle, geoLoc, partnerName, numChildren) {
     var tellFuture = `You will be a ${jobTitle} in ${geoLoc} and married to ${partnerName} with ${numChildren} children`
     pFortune = document.getElementById("fortune");
     pFortune.innerHTML = tellFuture
+    pFortune.style.color = "white";
 
 }
+
