@@ -182,21 +182,33 @@ var guesses = 10;
 var wins = 0;
 var losses = 0;
 var code = ["A", "B", "C"];
+var unrevealedCode = ["_", "_", "_"]
 var guessedLetters = "";
 
+document.getElementById("missingLetters").innerHTML = unrevealedCode.toString();
+
 function keyClick() {
+    var correctLetter = ""
     var currentLetter = String.fromCharCode(event.keyCode);
     guessedLetters += currentLetter;
     code.forEach(element => {
         if(currentLetter == element.toLowerCase()) {
-            document.getElementById("youFound").innerHTML = "You found the letter " + currentLetter;
-            console.log(String.fromCharCode(event.keyCode));
+            correctLetter = currentLetter;
+            unrevealedCode[unrevealedCode.indexOf()] = correctLetter;
         }
         else {
-            guesses--;
-            document.getElementById("guesses").innerHTML = "Guesses Left: " + guesses;
         }
     });
+    if(correctLetter != "") {
+        document.getElementById("youFound").innerHTML = "You found the letter " + currentLetter;
+
+    }
+    else {
+        guesses--;
+    document.getElementById("guesses").innerHTML = "Guesses left: " + guesses;
+    }
+    document.getElementById("missingLetters").innerHTML = unrevealedCode.toString();
+    
 }
 
 function generateFortune() {
