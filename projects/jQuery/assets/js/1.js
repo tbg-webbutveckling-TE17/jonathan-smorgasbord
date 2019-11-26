@@ -181,33 +181,52 @@ document.addEventListener("keypress", keyClick);
 var guesses = 10;
 var wins = 0;
 var losses = 0;
-var code = ["A", "B", "C"];
-var unrevealedCode = ["_", "_", "_"]
+var code = ["A", "B", "C", "A"];
+var unrevealedCode = new Array(code.length).fill("_")
 var guessedLetters = "";
+result = document.getElementById("result")
+document.getElementById("missingLetters").innerHTML = unrevealedCode.join("");
 
-document.getElementById("missingLetters").innerHTML = unrevealedCode.toString();
 
 function keyClick() {
+    console.log(code);
+    console.log(unrevealedCode);
     var correctLetter = ""
     var currentLetter = String.fromCharCode(event.keyCode);
     guessedLetters += currentLetter;
-    code.forEach(element => {
-        if(currentLetter == element.toLowerCase()) {
+    code.forEach(function (value, i) {
+        if(currentLetter == value.toLowerCase()) {
             correctLetter = currentLetter;
-            unrevealedCode[unrevealedCode.indexOf()] = correctLetter;
+            unrevealedCode[i] = correctLetter.toUpperCase();
         }
         else {
         }
     });
     if(correctLetter != "") {
         document.getElementById("youFound").innerHTML = "You found the letter " + currentLetter;
-
     }
     else {
         guesses--;
     document.getElementById("guesses").innerHTML = "Guesses left: " + guesses;
     }
-    document.getElementById("missingLetters").innerHTML = unrevealedCode.toString();
+    if(unrevealedCode.join() == code.join()) {
+        result.style.color = "green";
+        result.innerHTML = "You won!"
+        wins++;
+        document.getElementById("wins").innerHTML = "Wins: " + losses;
+        guesses = 10;
+        unrevealedCode = new Array(code.length).fill("_")
+        document.getElementById("missingLetters").innerHTML = unrevealedCode.join("");
+
+    }
+    if(guesses < 1) {
+        result.style.color = "red";
+        result.innerHTML = "You lost!"
+        losses++;
+        document.getElementById("losses").innerHTML = "Losses: " + losses;
+        guesses = 10;
+    }
+    document.getElementById("missingLetters").innerHTML = unrevealedCode.join("");
     
 }
 
