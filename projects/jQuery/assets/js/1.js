@@ -176,21 +176,29 @@
 //     $("#fade").fadeIn(5000, "linear");
 // });
 
-document.getElementById("idButton").addEventListener("click", generateFortune);
+// document.getElementById("idButton").addEventListener("click", generateFortune);
 document.addEventListener("keypress", keyClick);
+var missingLetters = document.getElementById("missingLetters")
+var result = document.getElementById("result")
 var guesses = 10;
 var wins = 0;
 var losses = 0;
-var code = ["A", "B", "C", "A"];
+var code = [];
+newWord();
 var unrevealedCode = new Array(code.length).fill("_")
 var guessedLetters = "";
-result = document.getElementById("result")
-document.getElementById("missingLetters").innerHTML = unrevealedCode.join("");
 
+function newWord() {
+    var input = prompt("Enter word", "ABCDA");
+    for (var i = 0; i < input.length; i++) {
+    code.push(input[i].toUpperCase());
+    }
+    unrevealedCode = new Array(code.length).fill("_");
+    missingLetters.innerHTML = unrevealedCode.join("");
+}
 
 function keyClick() {
     console.log(code);
-    console.log(unrevealedCode);
     var correctLetter = ""
     var currentLetter = String.fromCharCode(event.keyCode);
     guessedLetters += currentLetter;
@@ -198,8 +206,6 @@ function keyClick() {
         if(currentLetter == value.toLowerCase()) {
             correctLetter = currentLetter;
             unrevealedCode[i] = correctLetter.toUpperCase();
-        }
-        else {
         }
     });
     if(correctLetter != "") {
@@ -213,11 +219,11 @@ function keyClick() {
         result.style.color = "green";
         result.innerHTML = "You won!"
         wins++;
-        document.getElementById("wins").innerHTML = "Wins: " + losses;
+        document.getElementById("wins").innerHTML = "Wins: " + wins;
         guesses = 10;
-        unrevealedCode = new Array(code.length).fill("_")
-        document.getElementById("missingLetters").innerHTML = unrevealedCode.join("");
-
+        code = [];
+        missingLetters.innerHTML = unrevealedCode.join("");
+        newWord();
     }
     if(guesses < 1) {
         result.style.color = "red";
@@ -226,23 +232,22 @@ function keyClick() {
         document.getElementById("losses").innerHTML = "Losses: " + losses;
         guesses = 10;
     }
-    document.getElementById("missingLetters").innerHTML = unrevealedCode.join("");
+    missingLetters.innerHTML = unrevealedCode.join("");
     
 }
 
-function generateFortune() {
-    var rndName = ["Sasha", "LL", "OOO"];
-    var rndLoc = ["New York", "California"];
-    var rndJobTitle = ["Dentist", "Programmer"]
-    var rndNum = [Math.floor(Math.random() * 10)]
-    tellFortune(rndJobTitle[Math.floor(Math.random() * rndJobTitle.length)], rndLoc[Math.floor(Math.random() * rndLoc.length)], rndName[Math.floor(Math.random() * rndName.length)], rndNum[Math.floor(Math.random() * rndNum.length)])
-}
+// function generateFortune() {
+//     var rndName = ["Sasha", "LL", "OOO"];
+//     var rndLoc = ["New York", "California"];
+//     var rndJobTitle = ["Dentist", "Programmer"]
+//     var rndNum = [Math.floor(Math.random() * 10)]
+//     tellFortune(rndJobTitle[Math.floor(Math.random() * rndJobTitle.length)], rndLoc[Math.floor(Math.random() * rndLoc.length)], rndName[Math.floor(Math.random() * rndName.length)], rndNum[Math.floor(Math.random() * rndNum.length)])
+// }
 
-function tellFortune(jobTitle, geoLoc, partnerName, numChildren) {
-    var tellFuture = `You will be a ${jobTitle} in ${geoLoc} and married to ${partnerName} with ${numChildren} children`
-    pFortune = document.getElementById("fortune");
-    pFortune.innerHTML = tellFuture
-    pFortune.style.color = "white";
+// function tellFortune(jobTitle, geoLoc, partnerName, numChildren) {
+//     var tellFuture = `You will be a ${jobTitle} in ${geoLoc} and married to ${partnerName} with ${numChildren} children`
+//     pFortune = document.getElementById("fortune");
+//     pFortune.innerHTML = tellFuture
+//     pFortune.style.color = "white";
 
-}
-
+// }
