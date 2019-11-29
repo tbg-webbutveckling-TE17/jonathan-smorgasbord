@@ -178,9 +178,12 @@
 
 // document.getElementById("idButton").addEventListener("click", generateFortune);
 document.addEventListener("keypress", keyClick);
+document.addEventListener("click", newWord);
 var missingLetters = document.getElementById("missingLetters")
 var result = document.getElementById("result")
+var cash = document.getElementById("cash");
 var guesses = 10;
+var money = 0;
 var wins = 0;
 var losses = 0;
 var code = [];
@@ -203,6 +206,9 @@ function keyClick() {
     var currentLetter = String.fromCharCode(event.keyCode);
     guessedLetters += currentLetter;
     code.forEach(function (value, i) {
+        if(code[i] == unrevealedCode[i]) {
+            return;
+        }
         if(currentLetter == value.toLowerCase()) {
             correctLetter = currentLetter;
             unrevealedCode[i] = correctLetter.toUpperCase();
@@ -210,9 +216,17 @@ function keyClick() {
     });
     if(correctLetter != "") {
         document.getElementById("youFound").innerHTML = "You found the letter " + currentLetter;
+        money += 10;
+        money *= 2;
+        cash.innerHTML = "$"+money.toString();
     }
     else {
         guesses--;
+        if (money > 10) {
+            money -= 10;
+            money /= 2;
+            cash.innerHTML = "$"+money.toString();
+        }
     document.getElementById("guesses").innerHTML = "Guesses left: " + guesses;
     }
     if(unrevealedCode.join() == code.join()) {
@@ -223,7 +237,6 @@ function keyClick() {
         guesses = 10;
         code = [];
         missingLetters.innerHTML = unrevealedCode.join("");
-        newWord();
     }
     if(guesses < 1) {
         result.style.color = "red";
