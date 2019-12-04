@@ -178,7 +178,7 @@
 
 // document.getElementById("idButton").addEventListener("click", generateFortune);
 document.addEventListener("keypress", keyClick);
-document.addEventListener("click", newWord);
+document.getElementById("restart").addEventListener("click", newWord);
 var missingLetters = document.getElementById("missingLetters")
 var result = document.getElementById("result")
 var cash = document.getElementById("cash");
@@ -193,6 +193,7 @@ var guessedLetters = "";
 
 function newWord() {
     var input = prompt("Enter word", "ABCDA");
+    code = []
     for (var i = 0; i < input.length; i++) {
     code.push(input[i].toUpperCase());
     }
@@ -217,14 +218,14 @@ function keyClick() {
     if(correctLetter != "") {
         document.getElementById("youFound").innerHTML = "You found the letter " + currentLetter;
         money += 10;
-        money *= 2;
+        money *= 1.5;
         cash.innerHTML = "$"+money.toString();
     }
     else {
         guesses--;
-        if (money > 10) {
+        if (money > 25) {
             money -= 10;
-            money /= 2;
+            money /= 1.5;
             cash.innerHTML = "$"+money.toString();
         }
     document.getElementById("guesses").innerHTML = "Guesses left: " + guesses;
