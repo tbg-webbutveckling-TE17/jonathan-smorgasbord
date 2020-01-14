@@ -1,14 +1,19 @@
 var circleArr = [];
 
+
 document.addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-        var maxPoint = new Point(view.size.width, view.size.height);
-        var randomPoint = Point.random();
-        var point = maxPoint * randomPoint;
-        var newCircle = new Path.Circle(new Point(point), 800);
-        newCircle.fillColor = "blue";
-        circleArr.push(newCircle);
-    }
+    var sound = new Howl({
+        src: ['../assets/audio/' + e.key + '.mp3'],
+        volume: 0.1
+      });
+    var maxPoint = new Point(view.size.width, view.size.height);
+    var randomPoint = Point.random();
+    var point = maxPoint * randomPoint;
+    var newCircle = new Path.Circle(new Point(point), 800);
+    newCircle.fillColor = "blue";
+    circleArr.push(newCircle);
+    sound.play();
+    sound.fade(1, 0, 1000);
     console.log(circleArr);
 });
 
