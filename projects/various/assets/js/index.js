@@ -21,10 +21,8 @@ btnRemoveFriend.addEventListener("click", function() {
 });
 
 var img = document.getElementById("image")
-
-var btnDmgTaken = document.getElementsByTagName("button", 2);
-var btnAddMana = document.getElementsByTagName("button", 3);
-var btnCastSpell = document.getElementsByTagName("button", 4);
+var pHealth = document.getElementById("hpAmount")
+var pMana = document.getElementById("manaAmount")
 
 var hero = {
     isAlive: true,
@@ -32,14 +30,23 @@ var hero = {
     hp: 100,
     mana: 0,
     DmgTaken: function(amount) {
-        if(this.hp - amount < 0) {
+        if(this.hp - amount <= 0) {
             this.isAlive = false;
             this.hp = 0;
             console.log(`${this.name} has died!`);
             img.src = "assets/images/dead.jpg";
-        } else {
-            
+            pHealth.innerHTML = "0, you are dead!"
+            return
+        }
+        if(this.hp - amount <= 50) {
             this.hp -= amount;
+            img.src = "assets/images/real-shit.jpg";
+            pHealth.innerHTML = `${this.hp}, health getting low!`
+            return
+        } else {
+            this.hp -= amount;
+            pHealth.innerHTML = this.hp
+            return
         }
     },
     AddMana: function(amount) {
@@ -50,6 +57,7 @@ var hero = {
             this.mana += amount;
             console.log(`${this.mana} mana added!`)
         }
+        pMana.innerHTML = this.mana;
     },
     CastSpell: function(cost) {
         if(this.mana - cost < 0) {
@@ -58,11 +66,20 @@ var hero = {
             hero.mana -= cost;
             console.log(`${this.name} casts a spell!`)
         }
+        pMana.innerHTML = this.mana;
     }
 };
 
-hero.addMana(30);
-hero.castSpell(20);
-hero.castSpell(20);
-hero.dmgTaken(90);
-hero.dmgTaken(20);
+var btnDmgTaken = document.getElementById("dmg")
+var btnAddMana = document.getElementById("mana")
+var btnCastSpell = document.getElementById("spell")
+
+btnDmgTaken.addEventListener("click", function() {
+    hero.DmgTaken(20);
+});
+btnAddMana.addEventListener("click", function() {
+    hero.AddMana(20);
+});
+btnCastSpell.addEventListener("click", function() {
+    hero.CastSpell(20);
+});
