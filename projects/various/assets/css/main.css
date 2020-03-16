@@ -1,17 +1,61 @@
-#heroStatus {
-    display: flex;
-    flex-direction: row;
-}
 p {
-    margin: 5px;
+  margin: 5px;
 }
+
 #image {
-    width: 300px;
+  width: 300px;
+  margin: 10px;
 }
+
 button {
-    min-width: 90px;
-    height: 25px;
+  min-width: 90px;
+  height: 25px;
+  padding: 0 10px;
+  background: none;
+  border: none;
 }
+
+.content-toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #ebebeb;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border: 1px #888888 solid;
+  border-radius: 4px;
+  margin: 10px;
+}
+.content-toolbar p {
+  margin: 0;
+  padding: 10px;
+  color: white;
+}
+
+#restart {
+  margin: 0px 10px;
+  background: #ebebeb;
+  border: 1px #888888 solid;
+  border-radius: 4px;
+  opacity: 0;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+#heroStatus {
+  border-color: #ebebeb;
+}
+
+#manaAmount {
+  background: #7869ff;
+}
+
+#hpAmount {
+  background: #ff5a5a;
+}
+
 .disabledButton:disabled {
-    background: #444444;
+  background: #444444;
 }

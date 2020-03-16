@@ -5,23 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
 </head>
 <body>
-    <section>
+    <section class="content-toolbar">
         <button class="aFriend">Add friend</button>
         <button class="rFriend">Remove friend</button>
     </section>
     <img id="image" src="assets/images/sleep.jpg" alt="">
-    <section id="heroStatus">
-        <p id="manaAmount"></p>
+    <p id="gameStatus"></p>
+    <section class="content-toolbar" id="heroStatus">
         <p id="hpAmount"></p>
+        <p id="manaAmount"></p>
     </section>
-    <section>
+    <section id="heroButtons" class="content-toolbar">
         <button id="dmg">Damage taken</button>
         <button id="mana">Add mana</button>
         <button id="spell">Cast spell</button>
     </section>
+    <button id="restart">Restart Game?</button>
     <script src="assets/js/index.js"></script>
 </body>
     
