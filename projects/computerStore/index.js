@@ -1,50 +1,63 @@
+document.querySelectorAll(".remove").forEach(function(elem) {
+    elem.addEventListener("click"), shoppingCart.removeItem;
+    console.log("hello");
+});
+
 var products = {
     1 : {
         author : "Author 1",
         name : "Example 1",
         img : "https://pngimg.com/uploads/vans/vans_PNG22.png",
+        count : 0,
         price : 54.99
     },
     2 : {
         author : "Author 2",
         name : "Example 2",
         img : "https://upload.wikimedia.org/wikipedia/commons/8/83/Shoes%2C_leather_tennis_%28pair%29_%28AM_2017.30.1-4%29.jpg",
+        count : 0,
         price : 54.99
     },
     3 : {
         author : "Author 3",
         name : "Example 3",
         img : "https://storage.needpix.com/rsynced_images/shoes-3445390_1280.jpg",
+        count : 0,
         price : 54.99
     },
     4 : {
         author : "Author 4",
         name : "Example 4",
         img : "https://storage.needpix.com/rsynced_images/shoes-4116754_1280.jpg",
+        count : 0,
         price : 54.99
     },
     5 : {
         author : "Author 5",
         name : "Example 5",
         img : "https://cdn.pixabay.com/photo/2019/10/01/02/29/shoes-4517062_960_720.jpg",
+        count : 0,
         price : 54.99
     },
     6 : {
         author : "Author 6",
         name : "Example 6",
         img : "https://live.staticflickr.com/8751/16977244516_4babea3887_b.jpg",
+        count : 0,
         price : 54.99
     },
     7 : {
         author : "Author 7",
         name : "Example 7",
         img : "https://live.staticflickr.com/8226/8565614146_73030927c3_b.jpg",
+        count : 0,
         price : 54.99
     },
     8 : {
         author : "Author 8",
         name : "Example 8x",
         img : "https://storage.needpix.com/rsynced_images/shoe-3734828_1280.jpg",
+        count : 0,
         price : 54.99
     }
 };
@@ -91,14 +104,20 @@ window.addEventListener("load", function() {
 });
 
 var shoppingCart = {
-    data : {},
+    data : [],
 
     addItem : function() {
         var i = this.dataset.id;
         var product = products[i];
+        if(shoppingCart.data[i] != null) {
+            shoppingCart.data[i].count++;
+            console.log(shoppingCart.data);
+            return;
+        }
         (shoppingCart.data[i]) = {
             author : product['author'],
             name : product['name'],
+            count : 0,
             img : product['img'],
             price : product['price']
         }
@@ -132,7 +151,7 @@ var shoppingCart = {
         pPrice.classList.add("price");
         pRemove.classList.add("remove");
         pRemove.dataset.id = this.dataset.id;
-        pRemove.onclick = shoppingCart.removeItem(this.dataset.id);
+        pRemove.addEventListener("click", shoppingCart.removeItem);
 
         cartProductDescription.appendChild(pName);
         cartProductDescription.appendChild(pSize);
@@ -142,7 +161,9 @@ var shoppingCart = {
     
     },
     removeItem : function(i) {
-        shoppingCart.data[i] == null;
+        shoppingCart.data.splice(event.target.dataset.id, 1);
+        event.target.closest(".cartProduct").remove();
+        console.log(shoppingCart.data);
     }
 };
 
