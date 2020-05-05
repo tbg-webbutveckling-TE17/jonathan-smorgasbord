@@ -8,15 +8,25 @@ var products = {
         author : "Author 1",
         name : "Example 1",
         img : "https://pngimg.com/uploads/vans/vans_PNG22.png",
-        count : 0,
-        price : 54.99
+        price : 45.99,
+        S : {
+            count : 0,
+        },
+        M : {
+            count : 0,
+        }
     },
     2 : {
         author : "Author 2",
         name : "Example 2",
         img : "https://upload.wikimedia.org/wikipedia/commons/8/83/Shoes%2C_leather_tennis_%28pair%29_%28AM_2017.30.1-4%29.jpg",
-        count : 0,
-        price : 54.99
+        price : 45.99,
+        S : {
+            count : 0,
+        },
+        M : {
+            count : 0,
+        }
     },
     3 : {
         author : "Author 3",
@@ -100,6 +110,17 @@ window.addEventListener("load", function() {
         buyButton.dataset.id = i;   
         productBuy.appendChild(buyButton);
 
+        sizeSelection = document.createElement("select");
+        sizeSelection.classList.add("size");
+        productBuy.appendChild(sizeSelection);
+
+        var sizes = ["S", "M", "L", "XL"];
+        sizes.forEach(element => {
+            sizeOption = document.createElement("option");
+            sizeOption.value = element;
+            sizeOption.innerHTML = element;
+            sizeSelection.appendChild(sizeOption);
+        });
     }
 });
 
