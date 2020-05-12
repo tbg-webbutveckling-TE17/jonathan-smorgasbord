@@ -9,24 +9,14 @@ var products = {
         name : "Example 1",
         img : "https://pngimg.com/uploads/vans/vans_PNG22.png",
         price : 45.99,
-        S : {
-            count : 0,
-        },
-        M : {
-            count : 0,
-        }
+        count : 0,
     },
     2 : {
         author : "Author 2",
         name : "Example 2",
         img : "https://upload.wikimedia.org/wikipedia/commons/8/83/Shoes%2C_leather_tennis_%28pair%29_%28AM_2017.30.1-4%29.jpg",
         price : 45.99,
-        S : {
-            count : 0,
-        },
-        M : {
-            count : 0,
-        }
+        count : 0,
     },
     3 : {
         author : "Author 3",
@@ -124,21 +114,25 @@ window.addEventListener("load", function() {
     }
 });
 
+
+
 var shoppingCart = {
     data : [],
+
+    countInt: [],
 
     addItem : function() {
         var i = this.dataset.id;
         var product = products[i];
         if(shoppingCart.data[i] != null) {
             shoppingCart.data[i].count++;
-            console.log(shoppingCart.data);
+            shoppingCart.countInt[i].innerHTML = "Count: " + shoppingCart.data[i].count;
             return;
         }
         (shoppingCart.data[i]) = {
             author : product['author'],
             name : product['name'],
-            count : 0,
+            count : 1,
             img : product['img'],
             price : product['price']
         }
@@ -156,30 +150,43 @@ var shoppingCart = {
         var cartProductDescription = document.createElement("section");
         cartProductDescription.classList.add("cartProductDescription");
         cartProduct.appendChild(cartProductDescription);
+        cartProduct.dataset.id = this.dataset.id;
+
 
         var pName = document.createElement("p");
-        var pSize = document.createElement("p");
+        var pCount = document.createElement("p");
         var pPrice = document.createElement("p");
         var pRemove = document.createElement("p");
 
+        shoppingCart.countInt[i] = pCount;
+
         pName.innerHTML = shoppingCart.data[i].name;
-        pSize.innerHTML = "Size " + "M";
+        pCount.innerHTML = "Count: " + shoppingCart.data[i].count;
         pPrice.innerHTML = "$" + shoppingCart.data[i].price;
         pRemove.innerHTML = "Remove?";
 
         pName.classList.add("name");
-        pSize.classList.add("size");
+        pCount.classList.add("size");
         pPrice.classList.add("price");
         pRemove.classList.add("remove");
         pRemove.dataset.id = this.dataset.id;
         pRemove.addEventListener("click", shoppingCart.removeItem);
 
         cartProductDescription.appendChild(pName);
-        cartProductDescription.appendChild(pSize);
+        cartProductDescription.appendChild(pCount);
         cartProductDescription.appendChild(pPrice);
         cartProductDescription.appendChild(pRemove);
         console.log(shoppingCart.data);
     
+        var submitText = document.getElementById("submitText");
+        var submitString = "";
+        for (let index = 0; index < shoppingCart.data.length; index++) {
+            if(shoppingCart.data[index] != null) {
+                submitString += JSON.stringify((shoppingCart.data,["name", "count", "price"])
+            }
+        }
+        fuck it orkar inte fixa nu
+        });
     },
     removeItem : function(i) {
         shoppingCart.data.splice(event.target.dataset.id, 1);
