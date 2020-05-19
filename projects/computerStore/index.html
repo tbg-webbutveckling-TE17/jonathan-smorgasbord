@@ -19,7 +19,7 @@
                 <button>CONTACT</button>
             </div>
         </header>
-        <h2>Your Cart</h2>
+        <h2>Available products</h2>
         <section id="productsGrid" class="productsGrid">
             <!-- <section class="product">
                 <img src="https://cdn.shopify.com/s/files/1/0330/1705/products/W_MASK_COLLECTOR_D_760x.jpg?v=1570768161" class="productImage">
@@ -39,8 +39,11 @@
                     </section>
             </section> -->
         </section>
-        <h2>Your Cart</h2>
+        <h2>Your cart</h2>
+        <h3 id="cartInfo"></h3>
         <section id="cart">
+            <section id="cartItemsDisplay">
+            </section>
             <form action="" id="cartItems">
                 <label for="firstname">Full Name</label>
                 <input type="text" name="firstname" id="firstname" required>
@@ -300,6 +303,7 @@
                  <label for="shippingadress">Shipping Adress</label>
                  <input type="text" name="shippingadress" id="shippingadress" required>  
                  <textarea id="submitText"></textarea>
+                 <input id="submitForm" type="submit">
             </form>
         </section>
     </div>

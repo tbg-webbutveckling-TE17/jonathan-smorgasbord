@@ -160,7 +160,7 @@ header button {
   border-radius: 0.5em;
 }
 
-#cartItems {
+#cartItems, #cartItemsDisplay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,13 +176,13 @@ header button {
       -ms-flex-align: center;
           align-items: center;
 }
-#cartItems label {
+#cartItems label, #cartItemsDisplay label {
   text-align: center;
   color: black;
   font-family: "Open Sans", sans-serif;
   margin: 3px 0;
 }
-#cartItems input, #cartItems select {
+#cartItems input, #cartItems select, #cartItemsDisplay input, #cartItemsDisplay select {
   height: 35px;
   width: 200px;
   border-radius: 0.5em;
@@ -192,13 +192,13 @@ header button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-#cartItems input:focus:required:valid {
+#cartItems input:focus:required:valid, #cartItemsDisplay input:focus:required:valid {
   background: #66ff6e;
 }
-#cartItems input:focus:required:invalid {
+#cartItems input:focus:required:invalid, #cartItemsDisplay input:focus:required:invalid {
   background: #ff6666;
 }
-#cartItems .cartProduct {
+#cartItems .cartProduct, #cartItemsDisplay .cartProduct {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,23 +211,23 @@ header button {
   width: 100%;
   margin: 30px 0;
 }
-#cartItems img {
+#cartItems img, #cartItemsDisplay img {
   width: 20%;
 }
-#cartItems p {
+#cartItems p, #cartItemsDisplay p {
   margin: 0 30px;
 }
-#cartItems .cartProductDescription .price {
+#cartItems .cartProductDescription .price, #cartItemsDisplay .cartProductDescription .price {
   font-size: 15px;
 }
-#cartItems .cartProductDescription .size {
+#cartItems .cartProductDescription .size, #cartItemsDisplay .cartProductDescription .size {
   font-size: 15px;
 }
-#cartItems .cartProductDescription .name {
+#cartItems .cartProductDescription .name, #cartItemsDisplay .cartProductDescription .name {
   font-size: 18px;
   font-weight: 800;
 }
-#cartItems .cartProductDescription .remove {
+#cartItems .cartProductDescription .remove, #cartItemsDisplay .cartProductDescription .remove {
   font-size: 13px;
   color: grey;
 }

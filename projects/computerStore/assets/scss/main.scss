@@ -96,7 +96,7 @@ header {
         border-radius: .5em;
     }
 }
-#cartItems {
+#cartItems, #cartItemsDisplay {
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;

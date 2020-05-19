@@ -3,6 +3,8 @@ document.querySelectorAll(".remove").forEach(function(elem) {
     console.log("hello");
 });
 
+document.getElementById("submitForm").addEventListener("click"), shoppingCart.clearForm;
+
 var products = {
     1 : {
         author : "Author 1",
@@ -63,6 +65,7 @@ var products = {
 };
 
 window.addEventListener("load", function() {
+    shoppingCart.viewCart("hidden")
     var productsGrid = document.getElementById("productsGrid");
     for(var i in products) {
         product = document.createElement("section");
@@ -114,8 +117,6 @@ window.addEventListener("load", function() {
     }
 });
 
-
-
 var shoppingCart = {
     data : [],
 
@@ -137,10 +138,10 @@ var shoppingCart = {
             price : product['price']
         }
         var cartItems = document.getElementById("cartItems");
+        var cartItemsDisplay = document.getElementById("cartItemsDisplay")
         var cartProduct = document.createElement("section");
+        cartItemsDisplay.appendChild(cartProduct);
         cartProduct.classList.add("cartProduct");
-        
-        cartItems.appendChild(cartProduct);
         
         var img = document.createElement("img");
         img.src = shoppingCart.data[i].img;
@@ -182,16 +183,32 @@ var shoppingCart = {
         var submitString = "";
         for (let index = 0; index < shoppingCart.data.length; index++) {
             if(shoppingCart.data[index] != null) {
-                submitString += JSON.stringify((shoppingCart.data,["name", "count", "price"])
+                submitString += `[${index}] Name: ${shoppingCart.data[index].name} + Count: ${shoppingCart.data[index].count} Price: ${shoppingCart.data[index].price} \n`
+                // JSON.stringify((shoppingCart.data[index], ["name", "count", "price"]))
             }
         }
-        fuck it orkar inte fixa nu
-        });
+        submitText.innerHTML = submitString;
+        shoppingCart.viewCart("visible")
     },
     removeItem : function(i) {
         shoppingCart.data.splice(event.target.dataset.id, 1);
         event.target.closest(".cartProduct").remove();
         console.log(shoppingCart.data);
+        var cartItemsDisplay = document.getElementById("cartItemsDisplay")
+        var result = cartItemsDisplay.innerHTML.trim();
+        if(result == "") {
+            shoppingCart.viewCart("hidden")
+        }
+    },
+    viewCart : function(bool) {
+        document.getElementById("cartItemsDisplay").style.visibility = bool;
+        document.getElementById("cartItems").style.visibility = bool;
+        if(bool == "hidden") {
+            document.getElementById("cartInfo").innerHTML = "Your cart is empty! Add items to continue to checkout."
+        }
+    },
+    clearForm : function() {
+        document.getElementById("cartItems").reset();
     }
 };
 
