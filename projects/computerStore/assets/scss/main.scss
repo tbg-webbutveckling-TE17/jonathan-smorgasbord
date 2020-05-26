@@ -95,8 +95,12 @@ header {
         background: #55efc4;
         border-radius: .5em;
     }
+    .productInfo {
+        font-size: 12px;
+        color: #707070;
+    }
 }
-#cartItems, #cartItemsDisplay {
+#cart, #cartItems, #cartItemsDisplay {
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
@@ -156,6 +160,7 @@ header {
             color: grey;
         }
     }
+
 }
 
 .productDescription {

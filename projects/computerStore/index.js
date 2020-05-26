@@ -1,66 +1,90 @@
 document.querySelectorAll(".remove").forEach(function(elem) {
-    elem.addEventListener("click"), shoppingCart.removeItem;
+    elem.addEventListener("click", shoppingCart.removeItem);
     console.log("hello");
 });
 
-document.getElementById("submitForm").addEventListener("click"), shoppingCart.clearForm;
+document.getElementById("clearForm").addEventListener("click", function() {
+    document.getElementById("cartItems").reset();
+});
+
+document.getElementById("clearItems").addEventListener("click", function() {
+    shoppingCart.data = {};
+    document.getElementById("cartItemsDisplay").innerHTML = "";
+    shoppingCart.viewCart("hidden");
+
+});
+
+document.querySelectorAll(".moreInfo").forEach(function(elem) {
+    elem.addEventListener("click", function() {
+        event.target.querySelectorAll('')
+    });
+    console.log("hello");
+});
 
 var products = {
     1 : {
         author : "Author 1",
         name : "Example 1",
-        img : "https://pngimg.com/uploads/vans/vans_PNG22.png",
+        img : "https://i.pinimg.com/originals/5f/ca/07/5fca078feec5b31b286a234f2e6e6cfb.jpg",
         price : 45.99,
         count : 0,
+        description : "Made in a collab with /invalid author/, 100% cotton, best washed using the strength of 50 muscular men."
     },
     2 : {
         author : "Author 2",
         name : "Example 2",
-        img : "https://upload.wikimedia.org/wikipedia/commons/8/83/Shoes%2C_leather_tennis_%28pair%29_%28AM_2017.30.1-4%29.jpg",
+        img : "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3pQP-ADoFZ2BAHTvayyxNsdQ0ZK_QWhdQ3XB3bdSxPXqeczw9&usqp=CAU",
         price : 45.99,
         count : 0,
+        description : "100% cotton, best washed using the strength of 10 muscular men."
     },
     3 : {
         author : "Author 3",
         name : "Example 3",
         img : "https://storage.needpix.com/rsynced_images/shoes-3445390_1280.jpg",
         count : 0,
-        price : 54.99
+        price : 64.99,
+        description : "100% cotton, best washed using the strength of 90 muscular men."
     },
     4 : {
         author : "Author 4",
         name : "Example 4",
         img : "https://storage.needpix.com/rsynced_images/shoes-4116754_1280.jpg",
         count : 0,
-        price : 54.99
+        price : 44.99,
+        description : "100% cotton, best washed using the strength of 15 muscular men."
     },
     5 : {
         author : "Author 5",
         name : "Example 5",
         img : "https://cdn.pixabay.com/photo/2019/10/01/02/29/shoes-4517062_960_720.jpg",
         count : 0,
-        price : 54.99
+        price : 34.99,
+        description : "100% cotton, best washed using the strength of 12 muscular men."
     },
     6 : {
         author : "Author 6",
         name : "Example 6",
         img : "https://live.staticflickr.com/8751/16977244516_4babea3887_b.jpg",
         count : 0,
-        price : 54.99
+        price : 54.99,
+        description : "100% cotton, best washed using the strength of 60 muscular men."
     },
     7 : {
         author : "Author 7",
         name : "Example 7",
         img : "https://live.staticflickr.com/8226/8565614146_73030927c3_b.jpg",
         count : 0,
-        price : 54.99
+        price : 64.99,
+        description : "100% cotton, best washed using the strength of 33 muscular men."
     },
     8 : {
         author : "Author 8",
         name : "Example 8x",
         img : "https://storage.needpix.com/rsynced_images/shoe-3734828_1280.jpg",
         count : 0,
-        price : 54.99
+        price : 74.99,
+        description : "Limited edition, only temporarily in stock, 100% cotton & best washed using the strength of 500 muscular men."
     }
 };
 
@@ -103,17 +127,16 @@ window.addEventListener("load", function() {
         buyButton.dataset.id = i;   
         productBuy.appendChild(buyButton);
 
-        sizeSelection = document.createElement("select");
-        sizeSelection.classList.add("size");
-        productBuy.appendChild(sizeSelection);
+        // moreInfo = document.createElement("p");
+        // moreInfo.classList.add("moreInfo");
+        // productBuy.appendChild(moreInfo);
+        // moreInfo.innerHTML = "More info";
 
-        var sizes = ["S", "M", "L", "XL"];
-        sizes.forEach(element => {
-            sizeOption = document.createElement("option");
-            sizeOption.value = element;
-            sizeOption.innerHTML = element;
-            sizeSelection.appendChild(sizeOption);
-        });
+        itemDescription = document.createElement("p");
+        itemDescription.classList.add("productInfo");
+        product.appendChild(itemDescription);
+        itemDescription.innerHTML = products[i]["description"];
+
     }
 });
 
@@ -203,12 +226,10 @@ var shoppingCart = {
     viewCart : function(bool) {
         document.getElementById("cartItemsDisplay").style.visibility = bool;
         document.getElementById("cartItems").style.visibility = bool;
+        document.getElementById("clearItems").style.visibility = bool;
         if(bool == "hidden") {
             document.getElementById("cartInfo").innerHTML = "Your cart is empty! Add items to continue to checkout."
         }
-    },
-    clearForm : function() {
-        document.getElementById("cartItems").reset();
     }
 };
 
