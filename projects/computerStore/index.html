@@ -13,34 +13,20 @@
     <div id="wrapper">
         <header>
             <div id="nav">
-                <button>SHOP</button>
-                <button>NEWEST COLLECTION</button>
-                <button>FAQ</button>
-                <button>CONTACT</button>
+                <a href="#productsGrid"><button>SHOP</button></a>
+                <a href="#productsGrid"><button>NEWEST COLLECTION</button></a>
+                <a href="#cart"><button>CART</button></a>
             </div>
         </header>
         <h2>Available products</h2>
         <section id="productsGrid" class="productsGrid">
-            <!-- <section class="product">
-                <img src="https://cdn.shopify.com/s/files/1/0330/1705/products/W_MASK_COLLECTOR_D_760x.jpg?v=1570768161" class="productImage">
-                <section class="productName">
-                    <h3>CHOO</h3>
-                    <p>SCHOOL DISSECTION Sweater</p>
-                </section>
-                    <section class="productBuy">
-                        <p class="productPrice">$55.00</p>
-                        <button class="buyButton">Buy Now</button>
-                        <p>More info</p>
-                    </section>
-                    <p class="productInfo">100% cotton, best washed using the strength of 50 muscular men.</p>
-            </section> -->
         </section>
         <h2>Your cart</h2>
         <h3 id="cartInfo"></h3>
         <section id="cart">
+            <input class="redButton" type="button" id="clearItems" value="Remove All Items">
             <section id="cartItemsDisplay">
             </section>
-            <input type="button" id="clearItems">
             <form action="" id="cartItems">
                 <label for="firstname">Full Name</label>
                 <input type="text" name="firstname" id="firstname" required>
@@ -301,10 +287,10 @@
                  <input type="text" name="shippingadress" id="shippingadress" required>  
                  <textarea id="submitText"></textarea>
                  <input id="submitForm" type="submit">
-                 <input type="button" id="clearForm">
+                 <input class="redButton" type="button" id="clearForm" value="Clear">
             </form>
         </section>
     </div>
-    <script src="index.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

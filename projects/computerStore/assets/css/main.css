@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,6 +184,25 @@ header button {
       -ms-flex-align: center;
           align-items: center;
 }
+#cart #submitText, #cartItems #submitText, #cartItemsDisplay #submitText {
+  position: absolute;
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+#cart #submitForm, #cartItems #submitForm, #cartItemsDisplay #submitForm {
+  margin: 25px 0 10px 0;
+  background: #1e3799;
+  border: none;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+}
+#cart .redButton, #cartItems .redButton, #cartItemsDisplay .redButton {
+  background: #eb2f06;
+  border: none;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+}
 #cart label, #cartItems label, #cartItemsDisplay label {
   text-align: center;
   color: black;
@@ -190,6 +213,9 @@ header button {
   height: 35px;
   width: 200px;
   border-radius: 0.5em;
+  border: none;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
   background: #303030;
   color: white;
   padding: 5px;

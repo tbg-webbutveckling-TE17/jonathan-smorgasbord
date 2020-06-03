@@ -25,7 +25,7 @@ var products = {
     1 : {
         author : "Author 1",
         name : "Example 1",
-        img : "https://i.pinimg.com/originals/5f/ca/07/5fca078feec5b31b286a234f2e6e6cfb.jpg",
+        img : "assets/images/author1.jpg",
         price : 45.99,
         count : 0,
         description : "Made in a collab with /invalid author/, 100% cotton, best washed using the strength of 50 muscular men."
@@ -33,7 +33,7 @@ var products = {
     2 : {
         author : "Author 2",
         name : "Example 2",
-        img : "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3pQP-ADoFZ2BAHTvayyxNsdQ0ZK_QWhdQ3XB3bdSxPXqeczw9&usqp=CAU",
+        img : "assets/images/author2.jpg",
         price : 45.99,
         count : 0,
         description : "100% cotton, best washed using the strength of 10 muscular men."
@@ -41,7 +41,7 @@ var products = {
     3 : {
         author : "Author 3",
         name : "Example 3",
-        img : "https://storage.needpix.com/rsynced_images/shoes-3445390_1280.jpg",
+        img : "assets/images/author3.jpg",
         count : 0,
         price : 64.99,
         description : "100% cotton, best washed using the strength of 90 muscular men."
@@ -49,7 +49,7 @@ var products = {
     4 : {
         author : "Author 4",
         name : "Example 4",
-        img : "https://storage.needpix.com/rsynced_images/shoes-4116754_1280.jpg",
+        img : "assets/images/author4.jpg",
         count : 0,
         price : 44.99,
         description : "100% cotton, best washed using the strength of 15 muscular men."
@@ -57,7 +57,7 @@ var products = {
     5 : {
         author : "Author 5",
         name : "Example 5",
-        img : "https://cdn.pixabay.com/photo/2019/10/01/02/29/shoes-4517062_960_720.jpg",
+        img : "assets/images/author5.jpg",
         count : 0,
         price : 34.99,
         description : "100% cotton, best washed using the strength of 12 muscular men."
@@ -65,7 +65,7 @@ var products = {
     6 : {
         author : "Author 6",
         name : "Example 6",
-        img : "https://live.staticflickr.com/8751/16977244516_4babea3887_b.jpg",
+        img : "assets/images/author6.jpg",
         count : 0,
         price : 54.99,
         description : "100% cotton, best washed using the strength of 60 muscular men."
@@ -73,7 +73,7 @@ var products = {
     7 : {
         author : "Author 7",
         name : "Example 7",
-        img : "https://live.staticflickr.com/8226/8565614146_73030927c3_b.jpg",
+        img : "assets/images/author7.jpg",
         count : 0,
         price : 64.99,
         description : "100% cotton, best washed using the strength of 33 muscular men."
@@ -81,7 +81,7 @@ var products = {
     8 : {
         author : "Author 8",
         name : "Example 8x",
-        img : "https://storage.needpix.com/rsynced_images/shoe-3734828_1280.jpg",
+        img : "assets/images/author8.jpg",
         count : 0,
         price : 74.99,
         description : "Limited edition, only temporarily in stock, 100% cotton & best washed using the strength of 500 muscular men."
@@ -229,6 +229,9 @@ var shoppingCart = {
         document.getElementById("clearItems").style.visibility = bool;
         if(bool == "hidden") {
             document.getElementById("cartInfo").innerHTML = "Your cart is empty! Add items to continue to checkout."
+        }
+        else {
+            document.getElementById("cartInfo").innerHTML = "This is your cart, use the checkout below to purchase"
         }
     }
 };
